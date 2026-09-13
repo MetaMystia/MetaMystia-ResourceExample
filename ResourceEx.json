@@ -22,10 +22,11 @@
       "喧嚣塑像",
       "灼灵残月",
       "一具音游人",
-      "せんもみ"
+      "せんもみ",
+      "哈卡奈"
     ],
     "description": "MetaMystia 示例资源包 ResourceExample",
-    "version": "0.11.0",
+    "version": "0.11.1",
     "idRangeStart": 9000,
     "idRangeEnd": 12999,
     "idSignature": "aAOXzLVM3OMBvNSCeRVZ4cjaPu6sHwOIlfBB9XB+n2WODMrDb+eCuWZeE88KlXUIAj58ok7Dm2wsTTYJJ6pq8THMcm+FU/ryndeZfy5gCRnY7q3SzXn2s0ChmZKuTRkkWAU0f252a6Z9AXYu4tyv/h+kJGWXO1lFaVg8jErJqUMSlpNGGZe0tZABRPhX1oxPwYH82Lnvg0ct3REguZBEicC0/d5Lh1djvatUK3FdTR2h0rj0JdhInC2rcP8ymIg5txvsPcaA8cCbFdwyPgEaMue2NIjawUKpwLAl8mGwWVHrUTSxahkJ+MVJA7nLOGbYtvxmiyYMPQnDEVynBcPEeA==",
@@ -36,7 +37,6 @@
       "DLC4",
       "DLC5"
     ]
-
   },
   "characters": [
     {
@@ -3465,6 +3465,25 @@
     }
   ],
   "dialogPackages": [
+    {
+      "name": "_ResourceExample_Gift_Clothes_9003",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "“向看到这条消息的你致以最真挚的祝福和感谢——感谢支持!--ResourceExample制作组全体”"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "鸟脑袋看不懂写的是什么啦……虽然不知道是谁送给我这么漂亮精致的服装，总之先去试穿一下好了！"
+        }
+      ]
+    },
     {
       "name": "_ResourceExample_Kizuna_Daiyousei_LV1_001",
       "dialogList": [
@@ -13690,6 +13709,15 @@
       ]
     }
   ],
+  "gifts": [
+    {
+      "itemId": 9003,
+      "allowRepeat": false,
+      "title": "「花嫁」",
+      "dialogPackageName": "_ResourceExample_Gift_Clothes_9003"
+    }
+  ],
+  "dayMaps": [],
   "ingredients": [
     {
       "id": 11000,
@@ -15785,6 +15813,87 @@
       "notebookVerticalOffset": 60,
       "notebookUITitleHorizontalOffset": 0,
       "notebookUITitleVerticalOffset": -100
+    },
+    {
+      "id": 9003,
+      "name": "花嫁",
+      "description": "MetaMystia 制作组为感谢玩家支持，特别制作的花嫁礼服。层叠的纯白裙摆缀着海蓝与亮粉色玫瑰，搭配轻薄头纱和双色捧花，穿上之后仿佛化身从天界下凡的天女。无论从哪种角度来看，都是一套值得珍藏的服饰。",
+      "spritePath": "assets/Clothes/9001/icon.png",
+      "portraitPath": "assets/Clothes/9001/portrait.png",
+      "pixelFullConfig": {
+        "name": "_ResourceExample_Clothes_9001_新衣服1",
+        "mainSprite": [
+          "assets/Clothes/9001/Sprite/Main_0, 0.png",
+          "assets/Clothes/9001/Sprite/Main_0, 1.png",
+          "assets/Clothes/9001/Sprite/Main_0, 2.png",
+          "assets/Clothes/9001/Sprite/Main_1, 0.png",
+          "assets/Clothes/9001/Sprite/Main_1, 1.png",
+          "assets/Clothes/9001/Sprite/Main_1, 2.png",
+          "assets/Clothes/9001/Sprite/Main_2, 0.png",
+          "assets/Clothes/9001/Sprite/Main_2, 1.png",
+          "assets/Clothes/9001/Sprite/Main_2, 2.png",
+          "assets/Clothes/9001/Sprite/Main_3, 0.png",
+          "assets/Clothes/9001/Sprite/Main_3, 1.png",
+          "assets/Clothes/9001/Sprite/Main_3, 2.png"
+        ],
+        "eyeSprite": [
+          "assets/Clothes/9001/Sprite/Eyes_0, 0.png",
+          "assets/Clothes/9001/Sprite/Eyes_0, 1.png",
+          "assets/Clothes/9001/Sprite/Eyes_0, 2.png",
+          "assets/Clothes/9001/Sprite/Eyes_0, 3.png",
+          "assets/Clothes/9001/Sprite/Eyes_1, 0.png",
+          "assets/Clothes/9001/Sprite/Eyes_1, 1.png",
+          "assets/Clothes/9001/Sprite/Eyes_1, 2.png",
+          "assets/Clothes/9001/Sprite/Eyes_1, 3.png",
+          "assets/Clothes/9001/Sprite/Eyes_2, 0.png",
+          "assets/Clothes/9001/Sprite/Eyes_2, 1.png",
+          "assets/Clothes/9001/Sprite/Eyes_2, 2.png",
+          "assets/Clothes/9001/Sprite/Eyes_2, 3.png",
+          "assets/Clothes/9001/Sprite/Eyes_3, 0.png",
+          "assets/Clothes/9001/Sprite/Eyes_3, 1.png",
+          "assets/Clothes/9001/Sprite/Eyes_3, 2.png",
+          "assets/Clothes/9001/Sprite/Eyes_3, 3.png",
+          "assets/Clothes/9001/Sprite/Eyes_4, 0.png",
+          "assets/Clothes/9001/Sprite/Eyes_4, 1.png",
+          "assets/Clothes/9001/Sprite/Eyes_4, 2.png",
+          "assets/Clothes/9001/Sprite/Eyes_4, 3.png",
+          "assets/Clothes/9001/Sprite/Eyes_5, 0.png",
+          "assets/Clothes/9001/Sprite/Eyes_5, 1.png",
+          "assets/Clothes/9001/Sprite/Eyes_5, 2.png",
+          "assets/Clothes/9001/Sprite/Eyes_5, 3.png"
+        ],
+        "hairSprite": [
+          "assets/Clothes/9001/Sprite/Hair_0, 0.png",
+          "assets/Clothes/9001/Sprite/Hair_0, 1.png",
+          "assets/Clothes/9001/Sprite/Hair_0, 2.png",
+          "assets/Clothes/9001/Sprite/Hair_1, 0.png",
+          "assets/Clothes/9001/Sprite/Hair_1, 1.png",
+          "assets/Clothes/9001/Sprite/Hair_1, 2.png",
+          "assets/Clothes/9001/Sprite/Hair_2, 0.png",
+          "assets/Clothes/9001/Sprite/Hair_2, 1.png",
+          "assets/Clothes/9001/Sprite/Hair_2, 2.png",
+          "assets/Clothes/9001/Sprite/Hair_3, 0.png",
+          "assets/Clothes/9001/Sprite/Hair_3, 1.png",
+          "assets/Clothes/9001/Sprite/Hair_3, 2.png"
+        ],
+        "backSprite": [
+          "assets/Clothes/9001/Sprite/Back_0, 0.png",
+          "assets/Clothes/9001/Sprite/Back_0, 1.png",
+          "assets/Clothes/9001/Sprite/Back_0, 2.png",
+          "assets/Clothes/9001/Sprite/Back_1, 0.png",
+          "assets/Clothes/9001/Sprite/Back_1, 1.png",
+          "assets/Clothes/9001/Sprite/Back_1, 2.png",
+          "assets/Clothes/9001/Sprite/Back_2, 0.png",
+          "assets/Clothes/9001/Sprite/Back_2, 1.png",
+          "assets/Clothes/9001/Sprite/Back_2, 2.png",
+          "assets/Clothes/9001/Sprite/Back_3, 0.png",
+          "assets/Clothes/9001/Sprite/Back_3, 1.png",
+          "assets/Clothes/9001/Sprite/Back_3, 2.png"
+        ]
+      },
+      "notebookVerticalOffset": 65,
+      "notebookUITitleHorizontalOffset": 25,
+      "notebookUITitleVerticalOffset": -165
     }
   ],
   "eventNodes": [
