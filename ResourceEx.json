@@ -26,7 +26,7 @@
       "哈卡奈"
     ],
     "description": "MetaMystia 示例资源包 ResourceExample",
-    "version": "0.12.0",
+    "version": "0.12.1",
     "idRangeStart": 9000,
     "idRangeEnd": 12999,
     "idSignature": "aAOXzLVM3OMBvNSCeRVZ4cjaPu6sHwOIlfBB9XB+n2WODMrDb+eCuWZeE88KlXUIAj58ok7Dm2wsTTYJJ6pq8THMcm+FU/ryndeZfy5gCRnY7q3SzXn2s0ChmZKuTRkkWAU0f252a6Z9AXYu4tyv/h+kJGWXO1lFaVg8jErJqUMSlpNGGZe0tZABRPhX1oxPwYH82Lnvg0ct3REguZBEicC0/d5Lh1djvatUK3FdTR2h0rj0JdhInC2rcP8ymIg5txvsPcaA8cCbFdwyPgEaMue2NIjawUKpwLAl8mGwWVHrUTSxahkJ+MVJA7nLOGbYtvxmiyYMPQnDEVynBcPEeA==",
@@ -13803,6 +13803,39 @@
         20
       ],
       "spritePath": "assets/Ingredient/11007.png"
+    },
+    {
+      "id": 11008,
+      "name": "味噌",
+      "description": "由大豆发酵制成的酱料，咸香醇厚，是和风料理不可或缺的调味品。",
+      "level": 1,
+      "prefix": -1,
+      "isFish": false,
+      "isMeat": false,
+      "isVeg": true,
+      "baseValue": 4,
+      "tags": [
+        12,
+        3,
+        16
+      ],
+      "spritePath": "assets/Ingredient/11008.png"
+    },
+    {
+      "id": 11009,
+      "name": "花椒",
+      "description": "气味麻香浓烈的香料，中华料理的灵魂调味之一，能让舌尖微微发麻。",
+      "level": 2,
+      "prefix": -1,
+      "isFish": false,
+      "isMeat": false,
+      "isVeg": true,
+      "baseValue": 6,
+      "tags": [
+        14,
+        22
+      ],
+      "spritePath": "assets/Ingredient/11009.png"
     }
   ],
   "foods": [
@@ -15636,6 +15669,28 @@
           },
           "itemAmountMin": 4,
           "itemAmountMax": 8,
+          "sellProbability": 0.9
+        },
+        {
+          "item": {
+            "productType": "Ingredient",
+            "productId": 11008,
+            "productAmount": 1,
+            "productLabel": ""
+          },
+          "itemAmountMin": 12,
+          "itemAmountMax": 16,
+          "sellProbability": 0.9
+        },
+        {
+          "item": {
+            "productType": "Ingredient",
+            "productId": 11009,
+            "productAmount": 1,
+            "productLabel": ""
+          },
+          "itemAmountMin": 12,
+          "itemAmountMax": 16,
           "sellProbability": 0.9
         },
         {
