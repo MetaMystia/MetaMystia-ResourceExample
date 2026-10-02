@@ -16448,6 +16448,21 @@
         "description": "接下来30秒，所有顾客的点单料理必须额外包含「凉爽」tag，否则评价至多为「普通」",
         "portrait": "assets/Character/11001/Portrait/5.png"
       }
+    },
+    {
+      "id": 10001,
+      "implementation": "Minoriko",
+      "vfxBundle": "assets/Spell/10001",
+      "positive": {
+        "name": "丰符「大年收获者」",
+        "description": "展开「丰穣结界」，持续30秒。期间新制作的料理附加「饱腹」tag，原本带有「饱腹」tag的料理立即完成；供应带有「清酒」tag的酒水时返还其消耗。",
+        "portrait": "assets/Character/10001/Portrait/1.png"
+      },
+      "negative": {
+        "name": "秋符「无常秋日与少女之心」",
+        "description": "让当前场上的顾客感到饱腹，最多点单次数减少1次。立即结束正在持续的「丰穣结界」。",
+        "portrait": "assets/Character/10001/Portrait/3.png"
+      }
     }
   ],
   "buffs": [
@@ -16462,9 +16477,18 @@
       "name": "冰封酒宴",
       "description": "顾客对不含有$a的料理评价至多为$b，剩余$c秒",
       "icon": "assets/Buff/11003.png"
+    },
+    {
+      "id": 10001,
+      "name": "丰穣结界",
+      "description": "新制作的料理附加「饱腹」，原本饱腹的料理立即完成；供应清酒不消耗库存。剩余$a秒",
+      "icon": "assets/Buff/10001.png"
     }
   ],
   "assetBundles": [
-    { "path": "assets/Spell/11001" }
+    { "path": "assets/Spell/11001" },
+    {
+      "path": "assets/Spell/10001"
+    }
   ]
 }
