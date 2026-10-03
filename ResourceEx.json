@@ -26,7 +26,7 @@
       "哈卡奈"
     ],
     "description": "MetaMystia 示例资源包 ResourceExample",
-    "version": "0.12.1",
+    "version": "0.12.7",
     "idRangeStart": 9000,
     "idRangeEnd": 12999,
     "idSignature": "aAOXzLVM3OMBvNSCeRVZ4cjaPu6sHwOIlfBB9XB+n2WODMrDb+eCuWZeE88KlXUIAj58ok7Dm2wsTTYJJ6pq8THMcm+FU/ryndeZfy5gCRnY7q3SzXn2s0ChmZKuTRkkWAU0f252a6Z9AXYu4tyv/h+kJGWXO1lFaVg8jErJqUMSlpNGGZe0tZABRPhX1oxPwYH82Lnvg0ct3REguZBEicC0/d5Lh1djvatUK3FdTR2h0rj0JdhInC2rcP8ymIg5txvsPcaA8cCbFdwyPgEaMue2NIjawUKpwLAl8mGwWVHrUTSxahkJ+MVJA7nLOGbYtvxmiyYMPQnDEVynBcPEeA==",
@@ -14420,6 +14420,89 @@
         2000
       ],
       "spritePath": "assets/Food/12004.png"
+    },
+    {
+      "id": 11021,
+      "name": "香酥椒盐虾球",
+      "description": "选用饱满鲜虾裹薄粉快炸，起锅前撒上花椒与黑盐现炒的椒盐。外壳金黄酥脆，虾肉弹嫩多汁，麻香与灼热在舌尖次第炸开，一道让人额头冒汗、筷子停不下来的招牌海鲜。",
+      "level": 4,
+      "baseValue": 120,
+      "tags": [
+        1,
+        4,
+        14,
+        16,
+        22,
+        23,
+        28,
+        30
+      ],
+      "banTags": [
+        17,
+        21
+      ],
+      "spritePath": "assets/Food/12005.png"
+    },
+    {
+      "id": 11022,
+      "name": "真·麻婆豆腐",
+      "description": "川菜家常名味的究极形态，嫩豆腐与牛肉臊子在滚烫的红油汤汁中咕嘟作响，花椒的麻、辣椒的辣层层递进，灼热感直冲天灵盖，一勺下肚只觉浑身燥热、力量涌现。",
+      "level": 4,
+      "baseValue": 88,
+      "tags": [
+        0,
+        3,
+        14,
+        22,
+        23,
+        34,
+        35
+      ],
+      "banTags": [
+        17,
+        21
+      ],
+      "spritePath": "assets/Food/12006.png"
+    },
+    {
+      "id": 11023,
+      "name": "日式味噌烧肉",
+      "description": "厚涂味噌酱慢火炙烤的猪肉，油脂在炭火上滋滋作响，酱香渗入每一丝纹理，葱花解腻提香。烫嘴的时候配上一杯冰啤酒，就是居酒屋里最踏实的美味。",
+      "level": 3,
+      "baseValue": 75,
+      "tags": [
+        0,
+        3,
+        8,
+        12,
+        16,
+        33
+      ],
+      "banTags": [
+        17,
+        21
+      ],
+      "spritePath": "assets/Food/12007.png"
+    },
+    {
+      "id": 11024,
+      "name": "味噌乌冬",
+      "description": "劲道的乌冬面在味噌汤头里舒展身姿，撒上葱花趁热吸溜一大口，暖意从胃里一路升腾到心口。深夜收摊后来上这么一碗，连梦都是踏实的。",
+      "level": 2,
+      "baseValue": 45,
+      "tags": [
+        2,
+        3,
+        7,
+        9,
+        12,
+        16,
+        32
+      ],
+      "banTags": [
+        6
+      ],
+      "spritePath": "assets/Food/12008.png"
     }
   ],
   "beverages": [
@@ -14816,6 +14899,51 @@
       ],
       "cookTime": 7,
       "cookerType": "CuttingBoard"
+    },
+    {
+      "id": 11021,
+      "foodId": 11021,
+      "ingredients": [
+        23,
+        11009,
+        1003
+      ],
+      "cookTime": 4,
+      "cookerType": "Fryer"
+    },
+    {
+      "id": 11022,
+      "foodId": 11022,
+      "ingredients": [
+        5,
+        11009,
+        35,
+        2
+      ],
+      "cookTime": 3,
+      "cookerType": "Fryer"
+    },
+    {
+      "id": 11023,
+      "foodId": 11023,
+      "ingredients": [
+        1,
+        11008,
+        11003
+      ],
+      "cookTime": 4,
+      "cookerType": "Grill"
+    },
+    {
+      "id": 11024,
+      "foodId": 11024,
+      "ingredients": [
+        30,
+        11008,
+        11003
+      ],
+      "cookTime": 3,
+      "cookerType": "Pot"
     }
   ],
   "missionNodes": [
@@ -15735,6 +15863,50 @@
           },
           "itemAmountMin": 8,
           "itemAmountMax": 11,
+          "sellProbability": 1
+        },
+        {
+          "item": {
+            "productType": "Recipe",
+            "productId": 11021,
+            "productAmount": 1,
+            "productLabel": ""
+          },
+          "itemAmountMin": 1,
+          "itemAmountMax": 1,
+          "sellProbability": 1
+        },
+        {
+          "item": {
+            "productType": "Recipe",
+            "productId": 11022,
+            "productAmount": 1,
+            "productLabel": ""
+          },
+          "itemAmountMin": 1,
+          "itemAmountMax": 1,
+          "sellProbability": 1
+        },
+        {
+          "item": {
+            "productType": "Recipe",
+            "productId": 11023,
+            "productAmount": 1,
+            "productLabel": ""
+          },
+          "itemAmountMin": 1,
+          "itemAmountMax": 1,
+          "sellProbability": 1
+        },
+        {
+          "item": {
+            "productType": "Recipe",
+            "productId": 11024,
+            "productAmount": 1,
+            "productLabel": ""
+          },
+          "itemAmountMin": 1,
+          "itemAmountMax": 1,
           "sellProbability": 1
         }
       ]
