@@ -15685,6 +15685,50 @@
       ]
     }
   ],
+  "items": [
+    {
+      "id": 10000,
+      "name": "神秘的信封",
+      "description": "散发着淡淡神秘力量的信封，打开之后可能会发生更好的事情……",
+      "spritePath": "assets/Item/10000.png"
+    },
+    {
+      "id": 10001,
+      "name": "诅咒羊皮纸",
+      "description": "铭刻着邪恶符文的羊皮纸，角落的那一点污渍不知道是墨水还是血迹。\n\n\n总觉得之后可能会在什么时候用到……",
+      "spritePath": "assets/Item/10001.png"
+    },
+    {
+      "id": 10002,
+      "name": "竹炭",
+      "description": "由竹子烧制出的炭火。\n用于生火的话，在其内部的结构约束下，可以得到温和的火焰。",
+      "spritePath": "assets/Item/10002.png"
+    },
+    {
+      "id": 10003,
+      "name": "水仙花",
+      "description": "洁白而有着黄色花心的花朵，若是食用的话会有微弱的毒性。\n象征着自我克制的意识。",
+      "spritePath": "assets/Item/10003.png"
+    },
+    {
+      "id": 10004,
+      "name": "树枝编制的皇冠",
+      "description": "橙挑选树枝制作的简易皇冠，粗糙但含有一股茁壮的生命力。\n历经春夏秋冬也不会枯萎。",
+      "spritePath": "assets/Item/10004.png"
+    },
+    {
+      "id": 10005,
+      "name": "烧焦枯萎的花环",
+      "description": "\n",
+      "spritePath": "assets/Item/10005.png"
+    },
+    {
+      "id": 10006,
+      "name": "七色虹花冠",
+      "description": "盛放着的花冠，缠绕的水晶挂饰反射着七色的虹光，美轮美奂。\n愿她永远这般澄澈而美丽，散发着无穷的、崭新的生机。",
+      "spritePath": "assets/Item/10006.png"
+    }
+  ],
   "clothes": [
     {
       "id": 9000,
