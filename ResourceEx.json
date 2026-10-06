@@ -1080,6 +1080,42 @@
         ],
         "spawn": [
           {
+            "izakayaId": 0,
+            "relativeProb": 0.1,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 1,
+            "relativeProb": 0.15,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 2,
+            "relativeProb": 0.2,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 3,
+            "relativeProb": 0.1,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 4,
+            "relativeProb": 0.15,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 5,
+            "relativeProb": 0.2,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
             "izakayaId": 6,
             "relativeProb": 0.1,
             "onlySpawnAfterUnlocking": false,
@@ -1098,19 +1134,91 @@
             "onlySpawnWhenPlaceBeRecorded": false
           },
           {
-            "izakayaId": 9,
+            "izakayaId": 10,
             "relativeProb": 0.1,
             "onlySpawnAfterUnlocking": false,
             "onlySpawnWhenPlaceBeRecorded": false
           },
           {
-            "izakayaId": 24,
+            "izakayaId": 11,
             "relativeProb": 0.15,
             "onlySpawnAfterUnlocking": false,
             "onlySpawnWhenPlaceBeRecorded": false
           },
           {
-            "izakayaId": 25,
+            "izakayaId": 12,
+            "relativeProb": 0.2,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 14,
+            "relativeProb": 0.1,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 15,
+            "relativeProb": 0.15,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 16,
+            "relativeProb": 0.2,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 1000,
+            "relativeProb": 0.1,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 1001,
+            "relativeProb": 0.15,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 1002,
+            "relativeProb": 0.2,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 1003,
+            "relativeProb": 0.1,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 1004,
+            "relativeProb": 0.15,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 1005,
+            "relativeProb": 0.2,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 4000,
+            "relativeProb": 0.1,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 4001,
+            "relativeProb": 0.15,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 4002,
             "relativeProb": 0.2,
             "onlySpawnAfterUnlocking": false,
             "onlySpawnWhenPlaceBeRecorded": false
@@ -17190,8 +17298,8 @@
           "text": "藤原妹红，我来找你——哇！",
           "actions": [
             {
-              "actionType": "CG",
-              "sprite": "assets/CG/black.png"
+              "actionType": "BG",
+              "sprite": "assets/BG/black.png"
             }
           ]
         },
@@ -17273,7 +17381,7 @@
           "text": "后面的事情大概老板娘你也能猜到。辉夜她嘴上说得好听，手上却一点都没放水。",
           "actions": [
             {
-              "actionType": "CG",
+              "actionType": "BG",
               "shouldSet": false
             }
           ]
@@ -17396,8 +17504,8 @@
           "text": "妹红小姐，幸会。或许我来得不太是时候？",
           "actions": [
             {
-              "actionType": "CG",
-              "sprite": "assets/CG/black.png"
+              "actionType": "BG",
+              "sprite": "assets/BG/black.png"
             }
           ]
         },
@@ -17542,7 +17650,7 @@
           "text": "大概就是这样……",
           "actions": [
             {
-              "actionType": "CG",
+              "actionType": "BG",
               "shouldSet": false
             }
           ]
@@ -17637,8 +17745,8 @@
           "text": "不打了不打了！再打下去的话，实在是不好看啦。",
           "actions": [
             {
-              "actionType": "CG",
-              "sprite": "assets/CG/black.png"
+              "actionType": "BG",
+              "sprite": "assets/BG/black.png"
             }
           ]
         },
@@ -17881,7 +17989,7 @@
           "text": "大概就是这样。那位芙兰小姐……她是不是也面对着差不多的困境？",
           "actions": [
             {
-              "actionType": "CG",
+              "actionType": "BG",
               "shouldSet": false
             }
           ]
@@ -18771,8 +18879,8 @@
           "text": "咦？妖怪之山上还有这样的地方？",
           "actions": [
             {
-              "actionType": "CG",
-              "sprite": "assets/CG/black.png"
+              "actionType": "BG",
+              "sprite": "assets/BG/black.png"
             }
           ]
         },
@@ -18833,7 +18941,7 @@
           "text": "你这分明是武力震慑嘛。",
           "actions": [
             {
-              "actionType": "CG",
+              "actionType": "BG",
               "shouldSet": false
             }
           ]
@@ -20879,8 +20987,8 @@
           "text": "啊呀呀呀呀，早就听闻这红魔馆的馆主能操纵命运之力……",
           "actions": [
             {
-              "actionType": "CG",
-              "sprite": "assets/CG/black.png"
+              "actionType": "BG",
+              "sprite": "assets/BG/black.png"
             }
           ]
         },
@@ -21060,7 +21168,7 @@
           "text": "……",
           "actions": [
             {
-              "actionType": "CG",
+              "actionType": "BG",
               "shouldSet": false
             }
           ]
@@ -21094,8 +21202,8 @@
           "text": "哈哈哈哈哈哈哈哈！是芙兰赢了，真好玩，真过瘾！",
           "actions": [
             {
-              "actionType": "CG",
-              "sprite": "assets/CG/black.png"
+              "actionType": "BG",
+              "sprite": "assets/BG/black.png"
             }
           ]
         },
@@ -21174,7 +21282,7 @@
           "characterType": "Special",
           "pid": 5,
           "position": "Left",
-          "text": "“咔嚓——”本报记者射命丸文只身潜入红魔馆，被馆主和其从者殴打至重伤，有图片为证。上述标题纯属虚构，请妖精妖怪们自重，切勿赌上性命进行恶作剧"
+          "text": "“咔嚓——”本报记者射命丸文只身潜入红魔馆，被馆主和其从者殴打至重伤，有图片为证。上述标题纯属虚构，请妖精妖怪们自重，切勿赌上性命进行恶作剧。"
         },
         {
           "characterId": 20,
@@ -21282,7 +21390,7 @@
           "text": "……",
           "actions": [
             {
-              "actionType": "CG",
+              "actionType": "BG",
               "shouldSet": false
             }
           ]
@@ -21337,8 +21445,8 @@
           "text": "姐姐大人，芙兰来找姐姐玩啦！",
           "actions": [
             {
-              "actionType": "CG",
-              "sprite": "assets/CG/black.png"
+              "actionType": "BG",
+              "sprite": "assets/BG/black.png"
             }
           ]
         },
@@ -21602,7 +21710,7 @@
           "text": "……",
           "actions": [
             {
-              "actionType": "CG",
+              "actionType": "BG",
               "shouldSet": false
             }
           ]
@@ -21639,7 +21747,7 @@
           "characterId": 34,
           "characterType": "Special",
           "pid": 0,
-          "position": "Right",
+          "position": "Left",
           "text": "……",
           "actions": [
             {
@@ -23583,11 +23691,9 @@
       "isTimedMission": false,
       "missionFinishEvent": {
         "eventType": "Dialog",
-        "dialogPackageName": "_ResourceExample_Kizuna_Flandre_LV2_Chat_002"
+        "dialogPackageName": "_ResourceExample_Kizuna_Flandre_LV2_002"
       },
-      "postEvents": [
-        "_ResourceExample_Kizuna_Flandre_LV3_Upgrade_001_Event"
-      ],
+      "postEvents": [],
       "postMissionsAfterPerformance": []
     },
     {
@@ -23619,9 +23725,7 @@
         "eventType": "Dialog",
         "dialogPackageName": "_ResourceExample_Kizuna_Flandre_LV3_002"
       },
-      "postEvents": [
-        "_ResourceExample_Kizuna_Flandre_LV4_Upgrade_001_Event"
-      ],
+      "postEvents": [],
       "postMissionsAfterPerformance": []
     },
     {
@@ -23919,9 +24023,7 @@
         "eventType": "Dialog",
         "dialogPackageName": "_ResourceExample_Side_ScarletContract_GreatBarrier"
       },
-      "postEvents": [
-        "_ResourceExample_Kizuna_Flandre_LV2_Upgrade_001_Event"
-      ],
+      "postEvents": [],
       "postMissionsAfterPerformance": [
         "_ResourceExample_Kizuna_Flandre_LV1_Upgrade_003_Mission"
       ]
