@@ -24467,14 +24467,14 @@
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 16,
           "position": "Left",
           "text": "噔噔滴，噔噔咚，噔滴噔咚噔噔哒~"
         },
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 16,
           "position": "Right",
           "text": "神绮小姐，发生什么事了，这么高兴呀？"
         },
@@ -24488,56 +24488,56 @@
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 8,
           "position": "Right",
           "text": "欸欸，那我先听好消息吧……"
         },
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 14,
           "position": "Left",
           "text": "那就是，由于小琪琪长期为我提供各种各样的美味，本魔神终于可以自豪地宣布——以“不用魔法也能做出美食”为目的的修行终于可以告一段落了。本魔神终于成功啦！就算全程不用魔法，也能复现世界各地的美食了哦！"
         },
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 16,
           "position": "Right",
           "text": "哦哦！恭喜！神绮小姐辛苦啦~"
         },
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 14,
+          "pid": 15,
           "position": "Left",
           "text": "哼哼，真是超级感谢小琪琪啊。"
         },
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 16,
+          "pid": 20,
           "position": "Right",
           "text": "能帮到神绮小姐是我的荣幸呢。而且魔界的大家品尝到神绮大人的料理都很满意呀。比如雪雪每次都会给你的食谱打五星好评，然后不停地续单，说是回想起了家乡的味道呢。"
         },
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 14,
+          "pid": 1,
           "position": "Left",
           "text": "嘿嘿，雪这可爱鬼，很久以前在茶话会上也喜欢这样大快朵颐……真叫人怀念呢。"
         },
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 17,
           "position": "Right",
           "text": "原来雪雪以前就是这个样子啊……话说第二件特别好的好消息是什么呢？"
         },
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 3,
+          "pid": 16,
           "position": "Left",
           "text": "那就是——因为再也不用大修厨房，被梦子夸奖了！吼吼吼吼！"
         },
@@ -24551,7 +24551,7 @@
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 20,
           "position": "Right",
           "text": "那么最后那个超超超级好的消息是……？"
         },
@@ -24572,28 +24572,28 @@
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 17,
           "position": "Right",
           "text": "哎哎， 神绮小姐，你知道的，每天晚上我都有自家的工作要干，除此之外还要建设乐队，如果再加上更多兼职的话——"
         },
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 1,
+          "pid": 12,
           "position": "Left",
           "text": "哈哈哈，当然是开玩笑的啦，本魔神怎么可能这么邪恶嘛~"
         },
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 13,
           "position": "Left",
           "text": "哎，闲不下来，根本闲不下来~明明上一个目标才完成不久，本魔神又有新点子了……"
         },
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 16,
           "position": "Right",
           "text": "神绮小姐还真是干劲满满呐，这次又是什么样的点子呢？"
         },
@@ -24607,7 +24607,7 @@
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 22,
           "position": "Right",
           "text": "酒精饮料么，可我记得神绮小姐是不喝酒的吧。"
         },
@@ -24621,7 +24621,7 @@
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 3,
           "position": "Left",
           "text": "我想要研制一种不含酒精的全新饮料，既能拥有酒精饮料的爽感，又不会影响意识、对身体造成过多损害。"
         },
@@ -24649,63 +24649,63 @@
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 3,
+          "pid": 0,
           "position": "Left",
           "text": "<i>（神绮稍微施展魔力展开传送门，从传送门中掉下来一个雕像）</i>"
         },
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 14,
+          "pid": 16,
           "position": "Left",
           "text": "锵锵！"
         },
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 22,
           "position": "Right",
           "text": "这是，神绮小姐的雕像？"
         },
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 18,
           "position": "Right",
           "text": "嗯……精致的同时又透着几分威严和可爱，完全就是神绮小姐的风格嘛。"
         },
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 16,
           "position": "Right",
           "text": "这个也是神绮小姐的手笔，对吧？"
         },
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 14,
           "position": "Left",
           "text": "是的哦~这个雕像可是本魔神亲手制作的——毕竟，雕刻也是艺术创作中的重要一环呢。这尊雕像有着造物主独有的无穷魔力……正巧，听说老板娘要和搭档一起开演唱会，或许它能给老板娘带来好运也说不定呢~"
         },
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 21,
           "position": "Right",
           "text": "这么贵重的礼物，我真的能收下吗？"
         },
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 1,
+          "pid": 15,
           "position": "Left",
           "text": "当然啦，这段时间多亏了小琪琪的陪伴和指点，我真是受益匪浅呢，犹如鹈鹕灌饼。如此多的珍贵回忆，可是用再多的金钱与魔法也换不来的！"
         },
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 16,
           "position": "Right",
           "text": "我也得感谢神绮小姐呢。实不相瞒，我有一首新歌正是以神绮小姐为灵感……"
         },
@@ -24719,7 +24719,7 @@
         {
           "characterId": 34,
           "characterType": "Special",
-          "pid": 0,
+          "pid": 19,
           "position": "Right",
           "text": "总之，作为回礼，这张演唱会的VIP贵宾票就请神绮小姐收下啦！"
         },
@@ -28904,9 +28904,7 @@
     }
   ],
   "assetBundles": [
-    {
-      "path": "assets/Spell/11001"
-    },
+    { "path": "assets/Spell/11001" },
     {
       "path": "assets/Spell/10001"
     }
