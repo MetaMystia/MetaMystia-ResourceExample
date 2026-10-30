@@ -27,7 +27,7 @@
       "Dominare"
     ],
     "description": "MetaMystia 示例资源包 ResourceExample",
-    "version": "0.13.0",
+    "version": "0.14.0",
     "idRangeStart": 9000,
     "idRangeEnd": 12999,
     "idSignature": "aAOXzLVM3OMBvNSCeRVZ4cjaPu6sHwOIlfBB9XB+n2WODMrDb+eCuWZeE88KlXUIAj58ok7Dm2wsTTYJJ6pq8THMcm+FU/ryndeZfy5gCRnY7q3SzXn2s0ChmZKuTRkkWAU0f252a6Z9AXYu4tyv/h+kJGWXO1lFaVg8jErJqUMSlpNGGZe0tZABRPhX1oxPwYH82Lnvg0ct3REguZBEicC0/d5Lh1djvatUK3FdTR2h0rj0JdhInC2rcP8ymIg5txvsPcaA8cCbFdwyPgEaMue2NIjawUKpwLAl8mGwWVHrUTSxahkJ+MVJA7nLOGbYtvxmiyYMPQnDEVynBcPEeA==",
@@ -39,6 +39,66 @@
       "DLC5"
     ]
   },
+  "spells": [
+    {
+      "id": 11001,
+      "implementation": "Mai",
+      "vfxBundle": "assets/Spell/11001",
+      "positive": {
+        "name": "冰符「冰晶特调」",
+        "description": "接下来30秒，持续使用冰系魔法制作饮料，为在场普通订单提供对应的酒水",
+        "portrait": "assets/Character/11001/Portrait/0.png"
+      },
+      "negative": {
+        "name": "霜符「冰川急冻」",
+        "description": "接下来30秒，所有顾客的点单料理必须额外包含「凉爽」tag，否则评价至多为「普通」",
+        "portrait": "assets/Character/11001/Portrait/5.png"
+      }
+    },
+    {
+      "id": 10001,
+      "implementation": "Minoriko",
+      "vfxBundle": "assets/Spell/10001",
+      "positive": {
+        "name": "丰符「大年收获者」",
+        "description": "展开「丰穣结界」，持续20s。期间新制作的料理附加「饱腹」标签，原本带有「饱腹」标签的料理立即完成；「清酒」标签的酒水数量变为无限。",
+        "portrait": "assets/Character/10001/Portrait/1.png"
+      },
+      "negative": {
+        "name": "秋符「无常秋日与少女之心」",
+        "description": "让当前场上的顾客感到饱腹，最大点单数减少1次。立即结束正在持续的「丰穣结界」。",
+        "portrait": "assets/Character/10001/Portrait/3.png"
+      }
+    }
+  ],
+  "buffs": [
+    {
+      "id": 11002,
+      "name": "冰晶特调",
+      "description": "持续使用冰系魔法制作饮料，剩余$c秒",
+      "icon": "assets/Buff/11002.png"
+    },
+    {
+      "id": 11003,
+      "name": "冰封酒宴",
+      "description": "顾客对不含有$a的料理评价至多为$b，剩余$c秒",
+      "icon": "assets/Buff/11003.png"
+    },
+    {
+      "id": 10001,
+      "name": "丰穣结界",
+      "description": "新制作的料理附加「饱腹」，原本饱腹的料理立即完成；「清酒」标签的酒水数量变为无限。剩余$a秒",
+      "icon": "assets/Buff/10001.png"
+    }
+  ],
+  "assetBundles": [
+    {
+      "path": "assets/Spell/11001"
+    },
+    {
+      "path": "assets/Spell/10001"
+    }
+  ],
   "characters": [
     {
       "id": 9000,
@@ -2033,6 +2093,12 @@
             "onlySpawnWhenPlaceBeRecorded": false
           },
           {
+            "izakayaId": 3000,
+            "relativeProb": 0.1,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
             "izakayaId": 3001,
             "relativeProb": 0.1,
             "onlySpawnAfterUnlocking": false,
@@ -2040,12 +2106,6 @@
           },
           {
             "izakayaId": 3002,
-            "relativeProb": 0.1,
-            "onlySpawnAfterUnlocking": false,
-            "onlySpawnWhenPlaceBeRecorded": false
-          },
-          {
-            "izakayaId": 3003,
             "relativeProb": 0.1,
             "onlySpawnAfterUnlocking": false,
             "onlySpawnWhenPlaceBeRecorded": false
@@ -2127,7 +2187,24 @@
         "lv1UpgradePrerequisiteEvent": "_ResourceExample_Kizuna_Shinki_LV1_Upgrade_001_Event",
         "lv2UpgradePrerequisiteEvent": "_ResourceExample_Kizuna_Shinki_LV2_Upgrade_001_Event",
         "lv3UpgradePrerequisiteEvent": "_ResourceExample_Kizuna_Shinki_LV3_Upgrade_001_Event",
+        "lv4UpgradePrerequisiteEvent": "",
         "lv1Welcome": [
+          "_ResourceExample_Kizuna_Shinki_Welcome_001",
+          "_ResourceExample_Kizuna_Shinki_Welcome_002"
+        ],
+        "lv2Welcome": [
+          "_ResourceExample_Kizuna_Shinki_Welcome_001",
+          "_ResourceExample_Kizuna_Shinki_Welcome_002"
+        ],
+        "lv3Welcome": [
+          "_ResourceExample_Kizuna_Shinki_Welcome_001",
+          "_ResourceExample_Kizuna_Shinki_Welcome_002"
+        ],
+        "lv4Welcome": [
+          "_ResourceExample_Kizuna_Shinki_Welcome_001",
+          "_ResourceExample_Kizuna_Shinki_Welcome_002"
+        ],
+        "lv5Welcome": [
           "_ResourceExample_Kizuna_Shinki_Welcome_001",
           "_ResourceExample_Kizuna_Shinki_Welcome_002"
         ],
@@ -2135,15 +2212,21 @@
           "_ResourceExample_Kizuna_Shinki_LV1_Chat_001",
           "_ResourceExample_Kizuna_Shinki_LV1_Chat_002"
         ],
-        "lv1InviteSucceed": [],
-        "lv1InviteFailed": [],
-        "lv2Welcome": [
-          "_ResourceExample_Kizuna_Shinki_Welcome_001",
-          "_ResourceExample_Kizuna_Shinki_Welcome_002"
-        ],
         "lv2ChatData": [
           "_ResourceExample_Kizuna_Shinki_LV2_Chat_001",
           "_ResourceExample_Kizuna_Shinki_LV2_Chat_002"
+        ],
+        "lv3ChatData": [
+          "_ResourceExample_Kizuna_Shinki_LV3_Chat_001",
+          "_ResourceExample_Kizuna_Shinki_LV3_Chat_002"
+        ],
+        "lv4ChatData": [
+          "_ResourceExample_Kizuna_Shinki_LV4_Chat_001",
+          "_ResourceExample_Kizuna_Shinki_LV4_Chat_002"
+        ],
+        "lv5ChatData": [
+          "_ResourceExample_Kizuna_Shinki_LV4_Chat_001",
+          "_ResourceExample_Kizuna_Shinki_LV4_Chat_002"
         ],
         "lv2InviteSucceed": [
           "_ResourceExample_Kizuna_Shinki_Invite_Succeed"
@@ -2151,27 +2234,11 @@
         "lv2InviteFailed": [
           "_ResourceExample_Kizuna_Shinki_Invite_Failed"
         ],
-        "lv3Welcome": [
-          "_ResourceExample_Kizuna_Shinki_Welcome_001",
-          "_ResourceExample_Kizuna_Shinki_Welcome_002"
-        ],
-        "lv3ChatData": [
-          "_ResourceExample_Kizuna_Shinki_LV3_Chat_001",
-          "_ResourceExample_Kizuna_Shinki_LV3_Chat_002"
-        ],
         "lv3InviteSucceed": [
           "_ResourceExample_Kizuna_Shinki_Invite_Succeed"
         ],
         "lv3InviteFailed": [
           "_ResourceExample_Kizuna_Shinki_Invite_Failed"
-        ],
-        "lv4Welcome": [
-          "_ResourceExample_Kizuna_Shinki_Welcome_001",
-          "_ResourceExample_Kizuna_Shinki_Welcome_002"
-        ],
-        "lv4ChatData": [
-          "_ResourceExample_Kizuna_Shinki_LV4_Chat_001",
-          "_ResourceExample_Kizuna_Shinki_LV4_Chat_002"
         ],
         "lv4InviteSucceed": [
           "_ResourceExample_Kizuna_Shinki_Invite_Succeed"
@@ -2179,25 +2246,27 @@
         "lv4InviteFailed": [
           "_ResourceExample_Kizuna_Shinki_Invite_Failed"
         ],
+        "lv5InviteSucceed": [
+          "_ResourceExample_Kizuna_Shinki_Invite_Succeed"
+        ],
         "lv3RequestIngerdient": [
           "_ResourceExample_Kizuna_Shinki_Request_Ingredient"
         ],
         "lv4RequestIngerdient": [
           "_ResourceExample_Kizuna_Shinki_Request_Ingredient"
         ],
-        "lv4RequestBeverage": [
-          "_ResourceExample_Kizuna_Shinki_Request_Beverage"
-        ],
-        "lv5InviteSucceed": [
-          "_ResourceExample_Kizuna_Shinki_Invite_Succeed"
-        ],
         "lv5RequestIngerdient": [
           "_ResourceExample_Kizuna_Shinki_Request_Ingredient"
+        ],
+        "lv4RequestBeverage": [
+          "_ResourceExample_Kizuna_Shinki_Request_Beverage"
         ],
         "lv5RequestBeverage": [
           "_ResourceExample_Kizuna_Shinki_Request_Beverage"
         ],
-        "lv4UpgradePrerequisiteEvent": ""
+        "lv5Commision": [],
+        "lv5CommisionFinish": [],
+        "commisionAreaLabel": ""
       }
     },
     {
@@ -10603,6 +10672,2729 @@
           "pid": 16,
           "position": "Right",
           "text": "好嘞！"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV1_001",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "终于忙完了……暂时找个地方散散心吧。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "啦啦哩，啦啦噜，啦哩啦噜啦啦啦~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "咦，是那天送我造物主之盒的……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "没错，就是我魔界之主哒！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 9,
+          "position": "Left",
+          "text": "呜呜呜，你这家伙不会这么快就忘掉我了吧，我会伤心的哦……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "啊，想起来了，是神绮小姐啊。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "哼哼，鸟脑袋转得还算快，本魔神就勉为其难原谅你一次吧~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "那还真是谢谢了……话说神绮小姐怎么在这？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 21,
+          "position": "Right",
+          "text": "手里还抱着一袋很新鲜的……食材？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "当然是本魔神刚采购完食材，准备回去研究怎么做好吃的嘞。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 22,
+          "position": "Right",
+          "text": "研究……做好吃的？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "是呀，我最近在学做糕点来着，不过是纯手搓、不用魔法的那种~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "居然不用魔法吗？我有幸看过一位魔法使操纵魔法制作美食，实在是比手搓方便太多了。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "的确，咱们魔界拥有高度发达的魔法文明，绝大部分事情都可以让魔法代劳——但是，凡事都依赖魔法可不行呢，多少要学着自己动手。过度依赖的话，恐怕就要变成四体不勤的家伙了~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "说起来，似乎确实是这样呢。我在幻想乡里也见过不少魔界人，不过她们无论外貌还是谈吐都与这边的人类无异，平时也没太见她们使用魔法，原来这也是神绮大人的考量吗！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "没错没错，都是本魔神在带头来着，哼哼哼！比如露易兹，明明可以使用魔法传送门任意畅游，但她却坚持使用人类的交通工具，用自己的双脚去踏遍世界，就连我都忍不住想称赞一下她呢。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Right",
+          "text": "露易兹小姐的实地考察能力和探索精神确实非常值得敬佩呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "反观本魔神，创世之后，就再无更宏伟的目标可供追寻，不免有几分怅然若失……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "即使是神，没点新追求也会寂寞的啦，是时候该做出改变，找点不用魔法的兴趣爱好，顺带打发打发时间了！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Right",
+          "text": "原来即使是创世的魔神也会感到寂寞呀。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "说到这个，我最近做了一款全新的甜点，正愁找不到人试吃呢！小琪琪能不能……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "当然没问题啦，让我尝尝……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "太好啦，相信在幻想乡大厨的指导下，本魔神定能进步神速~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "这个也太好吃了吧，是完全没尝过的美味呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 4,
+          "position": "Left",
+          "text": "谢谢谢谢，那，这一块呢？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "喂，喂！你还好吗？不要啊——"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 7,
+          "position": "Right",
+          "text": "啊啊，世界……好远……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 7,
+          "position": "Right",
+          "text": "这，这是哪啊……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "神绮小姐？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "……橙？莉格露？有谁在吗？"
+        },
+        {
+          "characterId": 5014,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "呼啊——怎么又有人来啊，真是的……"
+        },
+        {
+          "characterId": 5014,
+          "characterType": "Special",
+          "pid": 4,
+          "position": "Left",
+          "text": "……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 7,
+          "position": "Right",
+          "text": "……"
+        },
+        {
+          "characterId": 5014,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "老，老板娘？！你怎么到这来了！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "啊哈哈，我，我也不知道哇。"
+        },
+        {
+          "characterId": 5014,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "……行了，我喊久侘歌给你送回去。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "小琪琪……？小琪琪！你没事吧！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "唔哇！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "那个，神绮小姐……刚，刚刚那个是……？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 9,
+          "position": "Left",
+          "text": "是没有魔法参与的手搓款来着，非常抱歉……明明之前雪吃了之后说很好吃来着……呜呜呜，看来还得改进啊，距离“不依赖魔法也能做出美食”的目标还有很长的路要走……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 7,
+          "position": "Right",
+          "text": "这个味道……让我想起之前来魔界时用噗噗哟果制作的“特别”料理……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "虽然不太懂你所说的料理有多么“特别”，但小琪琪的脸色似乎不太好啊……既然如此，为了表达歉意，这个黯月魔境慕斯的食谱就当补偿你的精神损失吧。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "好魔幻的名字……（原来魔界之主竟是如此中二的存在吗？）"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "这可是本魔神用来待客的招牌甜点之一，名字自然要贴合魔界的氛围。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "而且，虽然这道料理平时是梦子酱负责制作，但设计灵感可是本魔神灵机一动想出来的哦！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "比如，这道甜品的名字就来自本魔神的住所——超超超超超气派的宫殿“万魔殿”！而用来点缀的浆果则象征我平时的头饰——这可是全魔界独一份的可爱哦！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "明明是创造魔界的强大神明，内心却……还如此少女吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Left",
+          "text": "呀，小琪琪是不是在想什么很失礼的事情？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "算啦。说回制作方法……应该是用巧克力、香草、香芋，以及魔界随处可见的野生浆果制作而成。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 8,
+          "position": "Left",
+          "text": "至于慕斯的底料，只需要混合鸡蛋和奶油就可以了，制作起来十分容易——至少梦子写的食谱上是这么描述的，但我看一眼就晕了！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "那神绮小姐平时如何制作这种甜点呢？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "平时都是用魔法代工的啦，具体制作过程我也搞不懂。不过嘛，作为手搓糕点的初尝试，它似乎是一个完美的练习方案呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "所以，小琪琪能否顺带帮本魔神一个忙，亲手制作一次示范给我看呢？相信这个秘方在幻想乡名厨的手里定能拥有不一样的风味~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "欸，我、我吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "没错，本魔神相信小琪琪的实力，拜托了喔~做完记得让本魔神尝尝！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "那么，下次见啦！本魔神还要去构思作品制作人偶研究食谱就先不打扰啦——"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "不愧是创世神，一眨眼就传送走了呢……"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV1_002",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "神绮小姐，我来做黯月魔境慕斯的回访啦。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Left",
+          "text": "嚯嚯，实在是太好吃啦！该说不愧是来自幻想乡的专业大厨吗？口感松软，奶油与香草的清淡配上巧克力的浓郁，简直甜到了本魔神的心坎上，吃完之后感觉整个人都年轻了一千……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 22,
+          "position": "Right",
+          "text": "一千？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 8,
+          "position": "Left",
+          "text": "一……以前！让我回想起以前的时光，感觉像年轻了十岁呢~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "甜点制作什么的，我还是有信心的啦，能让神绮小姐满意真是太好了。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 13,
+          "position": "Left",
+          "text": "咳咳，为了做出零魔法含量的美食，我也得加把劲了……那个，对了，老板娘！以后也请多多和我探讨厨艺吧！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 9,
+          "position": "Right",
+          "text": "当然没问题啦，神绮小姐。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Right",
+          "text": "（身为魔界之主，明明可以用魔法让自己高枕无忧，却还是愿意耐下性子学习，真是令人印象深刻呢。）"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "为了表达感谢之情，快来尝尝本魔神纯手工制作的樱桃小饼干吧！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "噗！这个，我，呃……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 4,
+          "position": "Left",
+          "text": "放心啦，我已经尝过一块了，这次绝对不是黑暗料理！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Right",
+          "text": "<i>（颤抖着拿起一块）</i>"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "唔，味道真不错！两层酥脆的曲奇包裹着甜分恰到好处的樱桃夹心，真的是神绮小姐纯手工制作的吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "哼哼，那当然，我可是烤了超——多次才烤出这个完美的味道，快夸我快夸我！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "神绮小姐真是进步神速，一下子就让我忘了之前那个恐怖甜点的味道……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Left",
+          "text": "你你你，你怎么还记得那个呀！别跑，我要对你使用大记忆消失魔法！"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV2_001",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 21,
+          "position": "Right",
+          "text": "咦？那边显眼的红色是……神绮小姐吗？她在那里做什么呢？（看见神绮在对着料理台上一大堆黑乎乎的东西发呆）"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "嗯……这样就是第三步了吧？然后再加点面粉料、再多加点！……哎，不对，是不是要先放入可可豆来着？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Right",
+          "text": "神绮小姐！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Left",
+          "text": "唔嗯……要不要找场外援助呢？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Right",
+          "text": "神绮小姐？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "欸啊！原来是小琪琪啊。来的正好，我现在正在研究新的料理呢。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 22,
+          "position": "Right",
+          "text": "原来是这样啊……那这，旁边的，一团，黑黑的，东西是？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "啊，那是研究料理的副产物啦。亲手制作的料理果然还是需要小琪琪你来评审呢，能帮帮我吗？虽说“创造”魔界什么的简简单单，但是亲手“创造”料理对我来说却非常复杂呢。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 8,
+          "position": "Right",
+          "text": "原来如此……的确，做菜也是一种小小的“创造”呢。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "我一直在为了精进厨艺不断修行着——挑选新鲜食材，反复斟酌口感，小心翼翼地修改配方，直到做出让客人满意的料理。每一步，都是在慢慢打磨心意……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "完全正确~不管是做料理还是创造万物，本质都是把自己的心意融入作品之中。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "哼哼，在“创造”这方面，本魔神也算是个六边形战士呢，绘画、雕塑什么的都能做的说~当然，最擅长的果然还是制作自律人偶——"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 21,
+          "position": "Right",
+          "text": "自律人偶？似乎在哪里听到过类似的词。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "用简单易懂的话来说，就是可以自主行动的人偶。我有时候会去魔法森林找爱丽丝酱探讨问题——她也是这方面的行家呢。不过，我的制作过程要比她多上那么一道工序……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Left",
+          "text": "那就是，每做好一个人偶，我都会亲手用创世神独有的能力赋予它生命。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "怪不得爱丽丝小姐的家里也有那么多人偶，原来是把神绮小姐当作偶像在努力着吗……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "梦子酱就是我最引以为傲的作品哦。不过，别看她总是以女仆的模样陪在我身边，其实我们是完全平等的，也是彼此最重要的朋友。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "原来梦子小姐和神绮小姐的感情这么好吗……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "是的哦~偷偷告诉你，我们平时经常抢着做家务，都舍不得让彼此多劳累的说。只是，我根本就抢不过她呢……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 8,
+          "position": "Right",
+          "text": "听起来好温馨的样子。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "我向来都给我的作品们十足的自由，每个人都可以做自己喜欢的事。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "梦子酱和萨拉去帮厨了，露易兹在人间界到处游历，雪和舞去幻想乡摆摊卖东西了，她们一个个都在外边忙得不亦乐乎……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 7,
+          "position": "Left",
+          "text": "也正因如此，现在的万魔殿里常常就只剩我一个人，偶尔也会觉得有些无聊。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Right",
+          "text": "这样一想，神绮小姐也十分不容易呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "因此我才忽然发觉，已经很久没有让魔界的大家聚在一起开开心心了！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 7,
+          "position": "Left",
+          "text": "说起来，以前本魔神举办的茶话会基本都是全员到齐的来着。自从我开始研究做菜之后，露易兹就经常说要出去旅游来不了，舞直接不知道跑哪去了，其他魔界人也会因为各种琐事请假，只有雪每次都会吃光所有食物……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "神绮小姐不会觉得有点奇怪吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "奇怪？好像是有点呢，可能是本魔神伟大的作品们都成长了，都有自己的追求了吧！真令本魔神感慨啊，嘿嘿，虽然没人陪我开茶会确实有点孤单就是了……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "（小声）真的是这样吗？我怎么记得舞小姐曾经说过……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "为了庆祝大家的进步，同时也是为了让全体魔界人无论身在何处，都能随时想起茶话会的快乐，本魔神特地创造出了一道全新的美食！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "锵锵~！它的名字是“烬色魔纹千层酥”——这次不是梦子酱提供的食谱，而是我在吃透“黯月魔境慕斯”的制作方式之后灵机一动，自行研发的！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "居然是神绮小姐自己创新的料理吗？听起来料理技术又上升了呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "哼哼，本魔神可是非常有钻研精神的哦！这道甜品是以本魔神的翅膀为原型设计的，我这就把制作方法教给你~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "这样一来，又能做出全新的料理请大家品尝了呢！具体制作方式神绮小姐能告诉我吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "制作这道点心要用到面粉、鸡蛋、可可豆和黄油。味道虽有些许苦涩，但是一口下去，满口都是香脆的酥皮，简直是人间美味！最顶层还有本魔神的防伪标志——一大块做成魔神之翼形状的黑巧克力。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "哇，光是听着就感觉好好吃……我会努力试着做出来的！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 13,
+          "position": "Left",
+          "text": "呼呼，我希望对全体魔界住民来说，无论身在何处，一吃到它就能想起魔界的美好，想起自己的故乡，感慨一句“这就是魔界的味道”。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "不错，很有小巧思嘛。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "除此之外，我以后还打算用这个招待外界的宾客。以往我招待宾客都是用魔法制作料理，仔细想来，未免有些不太尊重——外界的宾客跨越瘴气结界，不远万里前来拜访，但我只是花了几秒钟biu~地一下就做好了招待他们的食物，似乎有种付出不对等的感觉呢……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Right",
+          "text": "神绮小姐也不必贬低自己啦，毕竟那种随时随地变出心中所想之物的魔法，听起来就不简单……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "无论如何，本魔神已经下定决心了，小琪琪快试着制作一下吧，也能见证我的研究成果！试验成功以后我就能亲自下厨了！待我完全掌握技巧，第一个招待的贵客就是小琪琪你哦~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "贵客！？我……我吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "当然啦，和小琪琪聊天超级开心的说！我也汲取到了不少新灵感呢。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "总觉得，和神绮小姐的距离拉近了不少呢。"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV2_002",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "神绮小姐，我来做烬色魔纹千层酥的回访啦。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Left",
+          "text": "这居然是，我不用魔法就能吃到的美食吗？酥的鲜香，可可的苦涩，还有果酱的酸甜——每一种味道都恰到好处，巧克力也是我最喜欢的果仁款，满满的高级感，实在是很难不给好评啊~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 8,
+          "position": "Right",
+          "text": "作为神绮小姐亲自设计的料理，我在制作过程中也发现，其中每一道工序、每一种食材都十分考究。没想到在这么短的时间里，神绮小姐就能从料理外行蜕变成设计大师，不愧是创世神呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 4,
+          "position": "Left",
+          "text": "谢谢认可啦～说到这个，我正打算用全新的食材打造一道梦幻的西式料理，也想用它来作为料理制作修行的收尾！小琪琪就等着吧！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "是之前所有训练浓缩而成的精华吗？实在是非常令人期待呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "没错，而且既然是用来招待客人的料理，那当然要用魔界特有的上好食材，让客人都感受到魔界的魅力！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Right",
+          "text": "说起来，神绮小姐似乎很喜欢西式料理的样子？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "因为西式料理就是很赞啊，尤其是甜点，充斥着梦幻、华丽和甜蜜的气息，宛若来到童话世界——就和现在的魔界一样呢。小琪琪应该也能发现，许多魔界人都用着西式名字……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Right",
+          "text": "真的耶，而且魔界的大家似乎也爱举办西式风格的茶话会。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "新的料理究竟会是什么呢？已经开始忍不住期待了啊……"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV3_001",
+      "dialogList": [
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "让我看看，这里应该还能再改进一下……嗯，就这么办吧~"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Right",
+          "text": "<i>（神绮捧着一个精致的笔记本——檀绯色的封面点缀着烫金，红黑交织的花纹泛着好看的光泽，其中似有魔力在涌动）</i>"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 22,
+          "position": "Right",
+          "text": "咦，神绮小姐手里的是……？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "喔，这个是我的创造手记啦，每次有新的灵感，我都会马上写到里面，然后再一点一点地完善……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "最强魔界人梦子酱的背后，也是本魔神无数次的修改哒！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "对创造主来说，有一位忠诚可靠又让人安心的伙伴实在是再完美不过了，真是令人羡慕的事情啊。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "完美？这倒是让本魔神想起了一些往事呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "我其实来自一个各方面都极度不完美的世界，那里充斥着疾病和战争，到处乌烟瘴气，居民们也都痛苦万分。怀着“魔也可以成为神”的想法，我每天都努力修行，精进自己的魔法，终于拥有了三对强大的翅膀，得以离开那里。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "六翼居然是修炼出来的吗，好厉害！真是没想到呢，神绮小姐居然有着这样的过去……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "是啊，只不过人外有人，天外有天。我仅仅是魔界的创世神，然而却有维度更高的造物主创造了包括魔界和幻想乡在内的整个世界……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "……咳，扯远了。总之，逃出来以后，我发誓要创造一个完美的世界，要给予我的住民们至高的幸福，而我也确实做到了——由我创造的新世界资源充足，没有任何争斗，而我的造物们又个个心地善良、爱好和平。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "除此之外，这里也没有任何天灾，还有着天然的瘴气作为结界一般的存在，足以抵御外敌，让人们一直安居乐业。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "原来，传说中的理想国是真实存在的吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "呵呵呵，并没有那么理想……随着时间流逝，我逐渐发现了一些严重的问题。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "尽管我给了这个世界和平、安宁与无限的资源，这个世界的文明却并没有像我想的那样逐渐壮大。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Left",
+          "text": "更坏的是，由于长期处在极度安逸的环境中，这里的住民没有任何进步的动力，一个接一个都变成了笨蛋……最后，我只能怀着愧疚予世界以新生。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "听上去怪吓人的啊。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "是呢，那个重获新生的世界正是魔界的雏形。从那时候起我就意识到，过于完美也不见得真的就是完美，反而是“不完美”让世界有了更多生气。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "而且，如果大家都是一模一样的完美存在，可就少了很多乐趣啦。小琪琪你应该也注意到了吧，魔界的居民们其实或多或少都有着自己的那份“不完美”，那正是我在之后的创造生涯中特意“倾注”给她们的。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Right",
+          "text": "舞小姐、雪雪酱……唔，难道说就连最完美的梦子也有不完美的一面吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 9,
+          "position": "Left",
+          "text": "是的哦，虽然梦子酱是我最伟大的创造，也是我最珍贵的宝藏，但是她过于认真要强，无论是工作还是其他什么方面都一丝不苟，于人于己都苛求做到极致——甚至有时候连我摄入的卡路里都要严格控制，呜呜我的蜜瓜芭菲啊~"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "也正因为如此，她每天忙前忙后，已经算是操劳过度了，即使是这样也不愿意给自己放个假。一些魔界人甚至私下叫她“可悲的人偶”……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Right",
+          "text": "原来如此，怪不得之前我提到“完美”一词的时候，神绮小姐才有这么大的反应呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "是啊，我真的很心疼她。这孩子有些倔，只要是为了我，什么事都愿意干，狠劲上来，怕是十个我都拦不住她，当年灵梦一行人来魔界时，也是她第一时间冲上来护在我身前……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "所以我才默许了她来帮你打下手。一方面是找机会给她放个假，另一方面是希望她能认识到“不完美”未必是坏事。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "做菜也是如此呢。我以前总是想着做出完美的料理，火候调味都要精准到极致，把自己折磨得特别辛苦。可后来发现，偶尔的小偏差和不一样的小搭配，有时候反而让料理有了独特的风味……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "创世和做菜果真有很多共同点的说~"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "所以啊，后来我明白了，比起追逐遥不可及的所谓完美，果然还是抓住当下的小小幸福更好一些。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "意识到这一点之后，我想这份以幸福为灵感的终极食谱也可以算是完成了。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "啊，是神绮小姐提到过的新食谱！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "其名为“樱绯星屑缀玉烩饭”。它的原型是外界被称为“Risotto”的烩饭料理，用糯米与帕尔马芝士糅合，加入辣椒碎与菌菇碎炒热，最后撒上香香的花瓣就完成啦。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "总之是一道量大管饱的甜辣系料理~菌菇碎象征魔界繁星点点的夜空，花瓣和辣椒碎代表幻想乡漫野的春花，而米饭则代指我们的日常生活。无论是魔界还是人间界，平凡的日常生活中都蕴藏着无限的美好，足以让我们驻足欣赏，品味花香，发现其中的小惊喜。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "仔细想想，正是这些细小的食材共同造就了它的美味，幸福也像这样藏在一点一滴的平凡日常里……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 4,
+          "position": "Right",
+          "text": "真是道意义非凡的料理。忽然就感觉浑身充满了干劲呢，制作什么的就包在我身上吧！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 11,
+          "position": "Right",
+          "text": "（平凡的幸福吗……对我来说，或许正是看见食客脸上洋溢的微笑。不管怎样，为了神绮小姐的笑容，加油吧！）"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV3_002",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "神绮小姐，我来做樱绯星屑缀玉烩饭的回访啦。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 11,
+          "position": "Left",
+          "text": "……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 22,
+          "position": "Right",
+          "text": "神绮小姐……？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 11,
+          "position": "Left",
+          "text": "………………"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "怎么了怎么了，是味道和想象中的有差距吗！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Left",
+          "text": "啊啊抱歉，是小琪琪做得太好吃了，我一回味起那个口感，就好像回到了最初品尝它的那一刻！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Left",
+          "text": "糯米裹着芝士的甜，花瓣上的露水味与清香，与鲜嫩多汁的菌菇碎一道入口，配上这份微辣简直完美！那个甜辣交织的风味，真的好想好想再尝一次呢！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "欸嘿嘿，那就再好不过了！神绮小姐太会夸了，我都要不好意思啦……神绮小姐如果还想再品尝的话，不如……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "没事啦，经过这段时间的修行，我只要吃一口料理就能知道它的食材成分、制作步骤以及烹饪时间。无论是怎样的珍馐佳肴，我都能完美复现出来！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "好厉害！既然如此，神绮小姐已经可以自己制作樱绯星屑缀玉烩饭了呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "没错没错。不仅仅是这个，每天晚上小琪琪招待我的不同料理，我也全都能完美掌握啦！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "真是再好不过啦！也就是说，料理修行……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "大成功！真的是多亏了有小琪琪一直帮助我呢！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Right",
+          "text": "等等，这也就意味着……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "小琪琪怎么突然一副要哭了的表情，这应该是值得庆祝的时刻才对吧？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 2,
+          "position": "Right",
+          "text": "既然神绮小姐已经能够仅凭味觉就掌握任何料理，也就意味着以后很难有机会来夜雀食堂光顾了吧……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Left",
+          "text": "唔嗯，恰恰相反，料理修行还没有正式告一段落呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "虽然我说过，什么珍馐都能复现出来，但是全魔界……啊不，全幻想乡！只有小琪琪一个人掌握了那么多的食谱。无论是山珍海味、家常小炒还是异界的稀有料理都会制作。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "所以，为了尽快掌握更丰富多样的食谱，本魔神已经决定了，在修行正式结束之前要经常来光顾！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "嘿嘿，那真是太好啦！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 4,
+          "position": "Right",
+          "text": "我也要打起十二分精神招待神绮小姐！"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_Welcome_001",
+      "dialogList": [
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "啦啦哩，啦啦噜~小琪琪，今晚也来陪本魔神研究“不依赖魔法的美食”吗？"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_Welcome_002",
+      "dialogList": [
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "哦呀？是小琪琪！本魔神刚刚又往创造手记里记了一条新灵感哦，嘿嘿~"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV1_Chat_001",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 21,
+          "position": "Right",
+          "text": "您是……创造了魔界的神明大人吗？我听许多人提起过您呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "哦呀？确实呢，本魔神已经在许多故事书中闪亮登场过了~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "原来是这样……我……呃，抱歉，我有点太紧张了……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "即使是神，保持平常心也很重要，所以不用那么拘束啦。啊，忘了做自我介绍呢，叫我神绮就好。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "原以为是只会出现在童话中的存在，如今却站在我面前，真是不可思议……"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV1_Chat_002",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 21,
+          "position": "Right",
+          "text": "我听说魔界的一切，包括自然环境、地势地貌，以及魔界的居民，都是由神绮小姐一人创造的，是真的吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "正是如此~所以才会有许多人把我视为母亲般的存在啊。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "好厉害……不过魔界那么大，管理起来不会很困难吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "的确呢~不过，作为创世神，我不会过多地干涉这个世界的秩序。每位魔界人都是自由的，可以成为自己想成为的样子。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "真好啊，如果有机会的话，我也想去魔界的地方都市看看那边的风景呢。"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV2_Chat_001",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Right",
+          "text": "说起来，我之前听一些客人说，魔界满是瘴气，是片荒芜的不毛之地，而且到处都有可怕的怪物……这是真的吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "嚯嚯，那只是表象而已。既然小琪琪你已经来魔界开过店，也结交了不少朋友，那我反问你，你眼中的魔界又是何种景象？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "在我眼里，魔界拥有高度发达的魔法文明，大家也都安居乐业。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "生活在这里如同置身童话世界一样惬意，而且也非常适合度假，和其他人描述里可怕的样子完全不同呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "没错，人云亦云的事不一定就是真相。如果没有亲自确认，就不能轻易下结论呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "实际上，魔界指的并不是“魔物的世界”，而是“魔法的世界”，因此是个修行魔法的好去处呢~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "果然，只有亲身经历之后才好得出结论啊。即使从别人那里学到了正确的知识，也要通过实践内化成自己的东西才行。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "做菜也是一样，只懂得理论却不尝试制作，就绝对无法做出完美的料理呢。"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV2_Chat_002",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Right",
+          "text": "那个，神绮小姐，其实我有一点非常好奇。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "嗯~？是什么事呢？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "身为魔界之主，您可以说是坐拥无上的名誉和地位。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 13,
+          "position": "Right",
+          "text": "许多人穷尽一生追寻的东西，您全都拥有了。这样一来，平日里不会感到无聊么……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "哼哼，那自然是不会的。对我来说，创造的旅途没有终点，每一站都有新的收获~"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "别忘了，本魔神现在的目标正是“不依赖魔法也能做出美食”呀！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "的确如此，某种意义上，烹饪也是一种“创造”的形式呢。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Right",
+          "text": "神绮小姐有这样的干劲，做什么都会成功的！"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV3_Chat_001",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "咦，有人在发传单？让我看看是什么……计划一场终身难忘的旅行——魔界旅行社火爆开张？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "哦？传单居然已经发到这里了么，看来今晚要给负责人加鸡腿了~"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "没错，这个旅行社正是本魔神开的哦！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "欸欸，神绮小姐怎么突然想到要开旅行社？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "当然是为魔界人的安全着想啦~不规范管理的话，无法保证秩序不说，像之前那次，还害我被四个从外界来的家伙揍了一顿……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "原来如此，神绮小姐真用心啊。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "（总觉得我应该认识神绮小姐说的这四位……算了，还是别问了）"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV3_Chat_002",
+      "dialogList": [
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Left",
+          "text": "老板娘，快来看这个！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "这是……我？真像啊，是神绮小姐画的吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "Bingo！答对了~"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "毕竟这是少数不用魔法也能勉强及格的方面……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "勉强及格？神绮小姐明明画得这么可爱，而且，能使用那么多种魔法本身就很厉害了，不是吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "呜呜，有时候会觉得我的自信完全是魔法带来的呢……不过还是谢谢老板娘啦，本魔神会继续努力的~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "（即使强大如魔界之主，似乎也有不够自信的一面呢……）"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV4_Chat_001",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "总觉得神绮小姐的发型很独特呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "小琪琪真有品哇～这可是本魔神亲自设计的发型，长长的头发很显淑女感，而小辫子又增添了几分可爱气息，很符合我吧？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "太符合啦，而且超级显眼的。我在命莲寺和魔法森林开店的时候，即使隔着老远的距离也能瞬间认出来呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 4,
+          "position": "Left",
+          "text": "只是刚好路过，刚好路过而已……这也能被发现的吗！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "是啊，毕竟除了神绮小姐，还有谁留着如此有特色的小辫……诶，等一下，那位粉毛魔界人貌似也有差不多的发型？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "你是说萨拉？噢，她负责守护魔界入口，觉得自己算是魔界的门面，所以形象上当然也要向我看齐……她是这么和我说的。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "这几天她都在利用闲暇时间旅游，说是想向红魔馆的门卫取取经。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "啊，说到旅游，最近魔界旅行社的生意越来越红火了，为此我设计了一个导游小旗子，还专门做了一顶帽子，方便带领游客参观魔界！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "原来神绮小姐是亲自担任导游，带领大家参观吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "没错，因为平时魔界人可以很轻松地开传送门出去旅游，但是外界的人却很少有机会进入魔界。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "因此，我打算亲自给大家介绍这里的环境，把魔界最美好、最真实的一面介绍给大家！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "神绮小姐真是尽职尽责呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "没错~绝对不是因为之前喊雪雪担任导游的时候，她把冰雪世界的地图拿反了，结果让大家齐刷刷掉进湖中央的冰窟窿里……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "听起来这才是真实原因吧！"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV4_Chat_002",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 22,
+          "position": "Right",
+          "text": "神绮小姐之前提到过，魔界的小公主们都喜欢往外界跑。那么与之相对，有没有外界人来魔界定居的情况呢？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "虽说魔界最外层有瘴气作为结界，不过确实有不少类似的案例。比如，有一位“月之天使”——也是我的老熟人萨丽艾尔，就长期定居在魔界地方都市呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "除此之外，很久以前还有一位德高望重的外界僧侣被封印在魔界，被封印的原因好像是……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "这个故事我好像在哪里听过来着？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Left",
+          "text": "糟了，我答应过她要保密的，咳……话说回来，也有很多魔法使不远万里跨越结界，来到魔界修炼，以精进自己的魔法呢。比如，老板娘应该认识爱丽丝酱吧。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "啊，是那位住在魔法森林里的超厉害的人偶使吧！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "是呢。想当初，还是人类的爱丽丝酱，就是追着一只小鸽子掉进鸽子洞，误打误撞来到了魔界，从那之后才正式踏上魔法使的修行之路~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "原来爱丽丝还有这样的过往吗？话说这段故事我似乎也在哪里听到过的样子……"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_Request_Ingredient",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "神绮小姐，我有一个问题！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "唔嗯，是什么问题呢？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Right",
+          "text": "既然魔界有着如此独特的环境，那么产出的食材应该也和外界大不相同吧？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "啊哈，确实有一部分食材是魔界独有的，比如星形草、高岭冰块、法力香料……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 7,
+          "position": "Right",
+          "text": "这么多！脑袋要晕啦！有没有什么魔界特产可以做料理的配料呢？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "当然有啦，有一种叫做噗噗哟花所结出的噗噗哟果实。平时在魔界，无论是茶话会还是电影放送之夜，大家都会把它当作甜点下饭呢！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "噗……噗噗哟果？那不就是幽幽子小姐之前吃过的欲望之果吗？那种恐怖的东西当成甜点吃真的没关系吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "恐怖？可是明明很美味呢，而且吃下去后，还会感觉魔力大增、浑身充满力量～"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Right",
+          "text": "根据魅魔小姐所做的实验来看，噗噗哟果会放大内心的欲望，因此对很多种族都会有可怕的后果呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "欸欸，原来是这样一回事吗？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "神绮小姐身为魔界之主，在这方面竟意外地天然呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "毕竟，我对魔界的理念就是无为而治~之前看到你和魅魔一起采集了不少，还以为是作为特产带回去吃了。我随身带了一点，你还需要吗？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Right",
+          "text": "不不不，那种恐怖的东西我是再也不会想要了。还有其他的吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 11,
+          "position": "Left",
+          "text": "唔，真没办法呢。（咬一口噗噗哟果）要不我另外找点魔界的普通食材让你带回去吧。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "哈啊——真是麻烦神绮小姐您了。"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_Request_Beverage",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 9,
+          "position": "Right",
+          "text": "大家都说来魔界旅游，最推荐体验的项目就是魔界的特色茶话会呢。正巧，前面就有一个小推车，或许现在去还能赶上！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "说起来，明明是茶话会，为什么只有一个打扮得像仙女姐姐一样的人参加呢？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "我听到了哦，仙女姐姐~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "欸，原来是神绮小姐！……话说回来，神绮小姐为什么一个人在举办茶话会？其他魔界人呢？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 7,
+          "position": "Left",
+          "text": "才不是！这可不是茶话会呀，你看旁边这个展板！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "唔，看不明白……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "上面写的是“魔界特调爱心饮品”哦！我这是在搞义卖啦~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "（看小推车上的饮料数量，好像基本没卖出去的样子……）"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "本魔神最近学会了饮料调制，喝起来不能说超级美味，但也算还不错的程度了，就想着让市场检验一下。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "结果不知是谁，把我之前做黑暗料理的事儿捅了出去，到头来根本没人敢买，实在是太悲伤了……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "都有些什么样的饮品呢？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "这个是“魔神特调青汁”，可以健胃消食。这个是“广藿香白花蛇舌草mocktail”，可以消暑降温。还有这个——"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "听名字感觉都很像黑暗料理。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Left",
+          "text": "怎么可能！小琪琪尝一下就知道了！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Right",
+          "text": "……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "唔，口感确实不错，或许是产品命名方面让大家望而却步了。只能说刻板印象真的很害人吧，明明神绮小姐手艺这么好，而且还费尽心思搞义卖……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 4,
+          "position": "Left",
+          "text": "唉，谢谢老板娘的安慰。反正应该也没人买了，带回去也不是那么方便，干脆全部送给老板娘好了～"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "啊哈哈，那我就心怀感激地收下了……（这算是意外收获吗？）"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_Invite_Succeed",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 22,
+          "position": "Right",
+          "text": "神绮小姐，今天晚上有空吗？咦，这是在写日记？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Left",
+          "text": "小琪琪来得正好，先站好不要动，一分钟就好！（拿着笔对着米斯蒂娅一番比划，然后开始在日记本上做记录）"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "嗯……这个地方这样（唰唰唰），不对，好像是这样（涂抹）？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "神绮小姐在忙什么呢？又有新的创作灵感了吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "唔嗯，本魔神正在尝试写一本小说，内容取自本魔神在人间界的各种游历趣事。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "原来神绮小姐还会写书么？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "那是！目前根据魔界人的投票，标题暂定为《神绮的幻想乡大冒险》！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "都有些什么样的游历趣事呢？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "比如，其中有一整节讲的是本魔神偶然遇到一位高人，在她的指点下，努力克服万难，最后学会自己制作美味料理的故事！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "听起来，好像是以我们的故事为灵感设计的剧情呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "没错，这位高人正是以小琪琪作为原型设计的。所以我刚刚才让你当了模特，在一分钟内画出了初版的设计草稿呢！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "神绮小姐居然连速绘都掌握了吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "嗯哼，猜猜为什么魔界人都多多少少有着自己的天赋和爱好呢？作为魔界之主，肯定要在力所能及的领域成为她们的榜样呢~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "所以，我能看看神绮小姐画的吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Left",
+          "text": "欸嘿，当然没问题呀！快看快看，这是一个妖怪美少女，她有两个头，十只脚，三对翅膀，八只手，每只手上都拿着不同的厨具……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "喂喂，这个跟我差太多了吧……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "但是但是，如果不这样设计的话，如何体现出像小琪琪那般，同时制作六道不同的料理、一秒钟给八桌顾客同时上菜的厨艺大师啊！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "等我写完了就给老板娘看看，如果我到时候还能想起这件事的话……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "（小声）这种听着就好恐怖的事情，一定不要想起来啊！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "嗯？小琪琪说什么了吗？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "呃，那个，神绮小姐写小说也辛苦了，不如转换一下心情，晚上来我这里吃一顿好的吧！我会为你准备一些你还没尝过的料理……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "那就再好不过啦！思考再多，也还是要实地考察呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Left",
+          "text": "本魔神一定要亲自前来观摩小琪琪的料理制作过程，写清楚这位世外高人如何熟练运用八只手上各不相同的厨具制作料理，以及她如何精准地运用十只脚，将每一道料理踢向不同的顾客，同时还能保证料理不洒出来！真是令魔期待！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "神绮小姐的钻研精神和创作欲实在是太恐怖了！求断更！"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_Invite_Failed",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 22,
+          "position": "Right",
+          "text": "神绮小姐，今天晚上有空吗？咦，这是在写日记？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Left",
+          "text": "小琪琪来得正好，先站好不要动，一分钟就好！（拿着笔对着米斯蒂娅一番比划，然后开始在日记本上做记录）"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "嗯……这个地方这样（唰唰唰），不对，好像是这样（涂抹）？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "神绮小姐在忙什么呢？又有新的创作灵感了吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "唔嗯，本魔神正在尝试写一本小说，内容取自本魔神在人间界的各种游历趣事。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "原来神绮小姐还会写书么？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "那是！目前根据魔界人的投票，标题暂定为《神绮的幻想乡大冒险》！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "都有些什么样的游历趣事呢？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "比如，其中有一整节讲的是本魔神偶然遇到一位高人，在她的指点下，努力克服万难，最后学会自己制作美味料理的故事！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "听起来，好像是以我们的故事为灵感设计的剧情呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "没错，这位高人正是以小琪琪作为原型设计的。所以我刚刚才让你当了模特，在一分钟内画出了初版的设计草稿呢！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Right",
+          "text": "神绮小姐居然连速绘都掌握了吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "嗯哼，猜猜为什么魔界人都多多少少有着自己的天赋和爱好呢？作为魔界之主，肯定要在力所能及的领域成为她们的榜样呢~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "所以，我能看看神绮小姐画的吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Left",
+          "text": "欸嘿，当然没问题呀！快看快看，这是一个妖怪美少女，她有两个头，十只脚，三对翅膀，八只手，每只手上都拿着不同的厨具……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "喂喂，这个跟我差太多了吧……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "但是但是，如果不这样设计的话，如何体现出像小琪琪那般，同时制作六道不同的料理、一秒钟给八桌顾客同时上菜的厨艺大师啊！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "等我写完了就给老板娘看看，如果我到时候还能想起这件事的话……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "（小声）这种听着就好恐怖的事情，一定不要想起来啊！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "嗯？小琪琪说什么了吗？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "呃，那个，神绮小姐写小说也辛苦了，不如转换一下心情，晚上来我这里吃一顿好的吧！我会为你准备一些你还没尝过的料理……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "唔，虽然确实肚子饿了想吃甜品，但是本魔神如果不能写清楚这位世外高人是如何在我不小心炸掉厨房、最需要帮助的时候，用三对翅膀宛如天使一般缓缓降落到我面前，然后用两个不同的脑袋，一个询问我原因，另外一个思考解决方法，最后成功帮我摆脱困境……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "别想那么多啦，还是吃饭要紧！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Left",
+          "text": "不行不行，如果小说的细节不清楚导致逻辑产生了硬伤，读者们会感到很困惑的！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "我要努力回忆当初和小琪琪的第一次相遇，一定要写清楚前因后果才能去吃蜜瓜芭菲！等我写完了就来——本魔神向你保证！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "神绮小姐的钻研精神和创作欲实在是太恐怖了！求断更！"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_LV4_001",
+      "dialogList": [
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Left",
+          "text": "噔噔滴，噔噔咚，噔滴噔咚噔噔哒~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "神绮小姐，发生什么事了，这么高兴呀？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "啊，是小琪琪来了。我有一个好消息、一个特别好的好消息，以及一个超超超级好的消息，你要先听哪个？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 8,
+          "position": "Right",
+          "text": "欸欸，那我先听好消息吧……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "那就是，由于小琪琪长期为我提供各种各样的美味，本魔神终于可以自豪地宣布——以“不用魔法也能做出美食”为目的的修行终于可以告一段落了。本魔神终于成功啦！就算全程不用魔法，也能复现世界各地的美食了哦！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "哦哦！恭喜！神绮小姐辛苦啦~"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "哼哼，真是超级感谢小琪琪啊。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "能帮到神绮小姐是我的荣幸呢。而且魔界的大家品尝到神绮大人的料理都很满意呀。比如雪雪每次都会给你的食谱打五星好评，然后不停地续单，说是回想起了家乡的味道呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "嘿嘿，雪这可爱鬼，很久以前在茶话会上也喜欢这样大快朵颐……真叫人怀念呢。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "原来雪雪以前就是这个样子啊……话说第二件特别好的好消息是什么呢？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Left",
+          "text": "那就是——因为再也不用大修厨房，被梦子夸奖了！吼吼吼吼！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Right",
+          "text": "嗯…对于厨房以及梦子小姐来说确实是个好消息呢……被自己的造物欣慰地夸奖，真是很有神绮小姐的风格呢。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "那么最后那个超超超级好的消息是……？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "这个呀，我最近其实还试着开了卖樱桃系甜点的小摊……嗯，梦子酱说老是宅家真的很不好，不如出来体验生活。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "没想到呀没想到，我的甜品在魔界都要卖爆了，大家都喜欢的不得了，目前正在考虑开设幻想乡分店呢。嗯……我看老板娘手艺了得，是个人才，不如就把老板娘抓来做分店店长为我打工吧，哼哼哼……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "哎哎， 神绮小姐，你知道的，每天晚上我都有自家的工作要干，除此之外还要建设乐队，如果再加上更多兼职的话——"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "哈哈哈，当然是开玩笑的啦，本魔神怎么可能这么邪恶嘛~"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 13,
+          "position": "Left",
+          "text": "哎，闲不下来，根本闲不下来~明明上一个目标才完成不久，本魔神又有新点子了……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "神绮小姐还真是干劲满满呐，这次又是什么样的点子呢？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "啊，是关于酒精饮料的……"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 22,
+          "position": "Right",
+          "text": "酒精饮料么，可我记得神绮小姐是不喝酒的吧。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Left",
+          "text": "哼，本魔神自然是滴酒不沾的，奈何身边的极个别家伙就喜欢喝酒上头，徒弟经常不在家，到头来还要我去收拾烂摊子，真是伤脑筋呢——不过，也正是这个启发了我的灵感……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "我想要研制一种不含酒精的全新饮料，既能拥有酒精饮料的爽感，又不会影响意识、对身体造成过多损害。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Right",
+          "text": "原来如此，是个好想法呢。如果能研究出不伤身体的平替饮品，恐怕连因酒而起的灾祸都会少很多吧。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "老板娘能理解我真是太好了~只是享受着崇拜什么的，也太不符合本魔神的哲学了，多少想为大家做点什么呢。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "对了，说到“崇拜”，我有一样东西要给你。"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "<i>（神绮稍微施展魔力展开传送门，从传送门中掉下来一个雕像）</i>"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Left",
+          "text": "锵锵！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 22,
+          "position": "Right",
+          "text": "这是，神绮小姐的雕像？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "嗯……精致的同时又透着几分威严和可爱，完全就是神绮小姐的风格嘛。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "这个也是神绮小姐的手笔，对吧？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "是的哦~这个雕像可是本魔神亲手制作的——毕竟，雕刻也是艺术创作中的重要一环呢。这尊雕像有着造物主独有的无穷魔力……正巧，听说老板娘要和搭档一起开演唱会，或许它能给老板娘带来好运也说不定呢~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 21,
+          "position": "Right",
+          "text": "这么贵重的礼物，我真的能收下吗？"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "当然啦，这段时间多亏了小琪琪的陪伴和指点，我真是受益匪浅呢，犹如鹈鹕灌饼。如此多的珍贵回忆，可是用再多的金钱与魔法也换不来的！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "我也得感谢神绮小姐呢。实不相瞒，我有一首新歌正是以神绮小姐为灵感……"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "什么，还有本魔神的事？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 19,
+          "position": "Right",
+          "text": "总之，作为回礼，这张演唱会的VIP贵宾票就请神绮小姐收下啦！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "哇哦，平时在魔界欣赏的都是茶会后的舞台剧演出，人间界的演唱会什么的，我还没去过呢。就让我好好鉴赏一番吧，说不定，本魔神还能帮忙整点演出特效嘞，嘿嘿~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 8,
+          "position": "Right",
+          "text": "好喔，那就演唱会上见啦。能为神绮小姐这样的尊贵客人献唱，也是我的荣幸呢！"
+        },
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Left",
+          "text": "真是期待，即将到来的演唱会，又能给我的创作带来怎样的新灵感呢——"
         }
       ]
     },
@@ -22022,2729 +24814,6 @@
           "text": "算了，不想了。今天也要朝着演唱会继续努力——"
         }
       ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV1_001",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "终于忙完了……暂时找个地方散散心吧。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "啦啦哩，啦啦噜，啦哩啦噜啦啦啦~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "咦，是那天送我造物主之盒的……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "没错，就是我魔界之主哒！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 9,
-          "position": "Left",
-          "text": "呜呜呜，你这家伙不会这么快就忘掉我了吧，我会伤心的哦……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "啊，想起来了，是神绮小姐啊。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "哼哼，鸟脑袋转得还算快，本魔神就勉为其难原谅你一次吧~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 20,
-          "position": "Right",
-          "text": "那还真是谢谢了……话说神绮小姐怎么在这？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 21,
-          "position": "Right",
-          "text": "手里还抱着一袋很新鲜的……食材？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "当然是本魔神刚采购完食材，准备回去研究怎么做好吃的嘞。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 22,
-          "position": "Right",
-          "text": "研究……做好吃的？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "是呀，我最近在学做糕点来着，不过是纯手搓、不用魔法的那种~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "居然不用魔法吗？我有幸看过一位魔法使操纵魔法制作美食，实在是比手搓方便太多了。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "的确，咱们魔界拥有高度发达的魔法文明，绝大部分事情都可以让魔法代劳——但是，凡事都依赖魔法可不行呢，多少要学着自己动手。过度依赖的话，恐怕就要变成四体不勤的家伙了~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "说起来，似乎确实是这样呢。我在幻想乡里也见过不少魔界人，不过她们无论外貌还是谈吐都与这边的人类无异，平时也没太见她们使用魔法，原来这也是神绮大人的考量吗！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "没错没错，都是本魔神在带头来着，哼哼哼！比如露易兹，明明可以使用魔法传送门任意畅游，但她却坚持使用人类的交通工具，用自己的双脚去踏遍世界，就连我都忍不住想称赞一下她呢。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Right",
-          "text": "露易兹小姐的实地考察能力和探索精神确实非常值得敬佩呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Left",
-          "text": "反观本魔神，创世之后，就再无更宏伟的目标可供追寻，不免有几分怅然若失……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Left",
-          "text": "即使是神，没点新追求也会寂寞的啦，是时候该做出改变，找点不用魔法的兴趣爱好，顺带打发打发时间了！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Right",
-          "text": "原来即使是创世的魔神也会感到寂寞呀。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "说到这个，我最近做了一款全新的甜点，正愁找不到人试吃呢！小琪琪能不能……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "当然没问题啦，让我尝尝……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "太好啦，相信在幻想乡大厨的指导下，本魔神定能进步神速~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "这个也太好吃了吧，是完全没尝过的美味呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 4,
-          "position": "Left",
-          "text": "谢谢谢谢，那，这一块呢？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Left",
-          "text": "喂，喂！你还好吗？不要啊——"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 7,
-          "position": "Right",
-          "text": "啊啊，世界……好远……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 7,
-          "position": "Right",
-          "text": "这，这是哪啊……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "神绮小姐？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "……橙？莉格露？有谁在吗？"
-        },
-        {
-          "characterId": 5014,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "呼啊——怎么又有人来啊，真是的……"
-        },
-        {
-          "characterId": 5014,
-          "characterType": "Special",
-          "pid": 4,
-          "position": "Left",
-          "text": "……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 7,
-          "position": "Right",
-          "text": "……"
-        },
-        {
-          "characterId": 5014,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "老，老板娘？！你怎么到这来了！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "啊哈哈，我，我也不知道哇。"
-        },
-        {
-          "characterId": 5014,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "……行了，我喊久侘歌给你送回去。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Left",
-          "text": "小琪琪……？小琪琪！你没事吧！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "唔哇！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "那个，神绮小姐……刚，刚刚那个是……？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 9,
-          "position": "Left",
-          "text": "是没有魔法参与的手搓款来着，非常抱歉……明明之前雪吃了之后说很好吃来着……呜呜呜，看来还得改进啊，距离“不依赖魔法也能做出美食”的目标还有很长的路要走……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 7,
-          "position": "Right",
-          "text": "这个味道……让我想起之前来魔界时用噗噗哟果制作的“特别”料理……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Left",
-          "text": "虽然不太懂你所说的料理有多么“特别”，但小琪琪的脸色似乎不太好啊……既然如此，为了表达歉意，这个黯月魔境慕斯的食谱就当补偿你的精神损失吧。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "好魔幻的名字……（原来魔界之主竟是如此中二的存在吗？）"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "这可是本魔神用来待客的招牌甜点之一，名字自然要贴合魔界的氛围。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "而且，虽然这道料理平时是梦子酱负责制作，但设计灵感可是本魔神灵机一动想出来的哦！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "比如，这道甜品的名字就来自本魔神的住所——超超超超超气派的宫殿“万魔殿”！而用来点缀的浆果则象征我平时的头饰——这可是全魔界独一份的可爱哦！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "明明是创造魔界的强大神明，内心却……还如此少女吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Left",
-          "text": "呀，小琪琪是不是在想什么很失礼的事情？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "算啦。说回制作方法……应该是用巧克力、香草、香芋，以及魔界随处可见的野生浆果制作而成。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 8,
-          "position": "Left",
-          "text": "至于慕斯的底料，只需要混合鸡蛋和奶油就可以了，制作起来十分容易——至少梦子写的食谱上是这么描述的，但我看一眼就晕了！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "那神绮小姐平时如何制作这种甜点呢？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "平时都是用魔法代工的啦，具体制作过程我也搞不懂。不过嘛，作为手搓糕点的初尝试，它似乎是一个完美的练习方案呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "所以，小琪琪能否顺带帮本魔神一个忙，亲手制作一次示范给我看呢？相信这个秘方在幻想乡名厨的手里定能拥有不一样的风味~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "欸，我、我吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "没错，本魔神相信小琪琪的实力，拜托了喔~做完记得让本魔神尝尝！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "那么，下次见啦！本魔神还要去构思作品制作人偶研究食谱就先不打扰啦——"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "不愧是创世神，一眨眼就传送走了呢……"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV1_002",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "神绮小姐，我来做黯月魔境慕斯的回访啦。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Left",
-          "text": "嚯嚯，实在是太好吃啦！该说不愧是来自幻想乡的专业大厨吗？口感松软，奶油与香草的清淡配上巧克力的浓郁，简直甜到了本魔神的心坎上，吃完之后感觉整个人都年轻了一千……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 22,
-          "position": "Right",
-          "text": "一千？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 8,
-          "position": "Left",
-          "text": "一……以前！让我回想起以前的时光，感觉像年轻了十岁呢~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "甜点制作什么的，我还是有信心的啦，能让神绮小姐满意真是太好了。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 13,
-          "position": "Left",
-          "text": "咳咳，为了做出零魔法含量的美食，我也得加把劲了……那个，对了，老板娘！以后也请多多和我探讨厨艺吧！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 9,
-          "position": "Right",
-          "text": "当然没问题啦，神绮小姐。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Right",
-          "text": "（身为魔界之主，明明可以用魔法让自己高枕无忧，却还是愿意耐下性子学习，真是令人印象深刻呢。）"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "为了表达感谢之情，快来尝尝本魔神纯手工制作的樱桃小饼干吧！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "噗！这个，我，呃……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 4,
-          "position": "Left",
-          "text": "放心啦，我已经尝过一块了，这次绝对不是黑暗料理！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Right",
-          "text": "<i>（颤抖着拿起一块）</i>"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "唔，味道真不错！两层酥脆的曲奇包裹着甜分恰到好处的樱桃夹心，真的是神绮小姐纯手工制作的吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "哼哼，那当然，我可是烤了超——多次才烤出这个完美的味道，快夸我快夸我！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 20,
-          "position": "Right",
-          "text": "神绮小姐真是进步神速，一下子就让我忘了之前那个恐怖甜点的味道……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Left",
-          "text": "你你你，你怎么还记得那个呀！别跑，我要对你使用大记忆消失魔法！"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV2_001",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 21,
-          "position": "Right",
-          "text": "咦？那边显眼的红色是……神绮小姐吗？她在那里做什么呢？（看见神绮在对着料理台上一大堆黑乎乎的东西发呆）"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "嗯……这样就是第三步了吧？然后再加点面粉料、再多加点！……哎，不对，是不是要先放入可可豆来着？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Right",
-          "text": "神绮小姐！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Left",
-          "text": "唔嗯……要不要找场外援助呢？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Right",
-          "text": "神绮小姐？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "欸啊！原来是小琪琪啊。来的正好，我现在正在研究新的料理呢。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 22,
-          "position": "Right",
-          "text": "原来是这样啊……那这，旁边的，一团，黑黑的，东西是？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "啊，那是研究料理的副产物啦。亲手制作的料理果然还是需要小琪琪你来评审呢，能帮帮我吗？虽说“创造”魔界什么的简简单单，但是亲手“创造”料理对我来说却非常复杂呢。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 8,
-          "position": "Right",
-          "text": "原来如此……的确，做菜也是一种小小的“创造”呢。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "我一直在为了精进厨艺不断修行着——挑选新鲜食材，反复斟酌口感，小心翼翼地修改配方，直到做出让客人满意的料理。每一步，都是在慢慢打磨心意……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "完全正确~不管是做料理还是创造万物，本质都是把自己的心意融入作品之中。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "哼哼，在“创造”这方面，本魔神也算是个六边形战士呢，绘画、雕塑什么的都能做的说~当然，最擅长的果然还是制作自律人偶——"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 21,
-          "position": "Right",
-          "text": "自律人偶？似乎在哪里听到过类似的词。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "用简单易懂的话来说，就是可以自主行动的人偶。我有时候会去魔法森林找爱丽丝酱探讨问题——她也是这方面的行家呢。不过，我的制作过程要比她多上那么一道工序……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Left",
-          "text": "那就是，每做好一个人偶，我都会亲手用创世神独有的能力赋予它生命。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "怪不得爱丽丝小姐的家里也有那么多人偶，原来是把神绮小姐当作偶像在努力着吗……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "梦子酱就是我最引以为傲的作品哦。不过，别看她总是以女仆的模样陪在我身边，其实我们是完全平等的，也是彼此最重要的朋友。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "原来梦子小姐和神绮小姐的感情这么好吗……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "是的哦~偷偷告诉你，我们平时经常抢着做家务，都舍不得让彼此多劳累的说。只是，我根本就抢不过她呢……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 8,
-          "position": "Right",
-          "text": "听起来好温馨的样子。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "我向来都给我的作品们十足的自由，每个人都可以做自己喜欢的事。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "梦子酱和萨拉去帮厨了，露易兹在人间界到处游历，雪和舞去幻想乡摆摊卖东西了，她们一个个都在外边忙得不亦乐乎……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 7,
-          "position": "Left",
-          "text": "也正因如此，现在的万魔殿里常常就只剩我一个人，偶尔也会觉得有些无聊。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Right",
-          "text": "这样一想，神绮小姐也十分不容易呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "因此我才忽然发觉，已经很久没有让魔界的大家聚在一起开开心心了！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 7,
-          "position": "Left",
-          "text": "说起来，以前本魔神举办的茶话会基本都是全员到齐的来着。自从我开始研究做菜之后，露易兹就经常说要出去旅游来不了，舞直接不知道跑哪去了，其他魔界人也会因为各种琐事请假，只有雪每次都会吃光所有食物……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "神绮小姐不会觉得有点奇怪吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Left",
-          "text": "奇怪？好像是有点呢，可能是本魔神伟大的作品们都成长了，都有自己的追求了吧！真令本魔神感慨啊，嘿嘿，虽然没人陪我开茶会确实有点孤单就是了……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "（小声）真的是这样吗？我怎么记得舞小姐曾经说过……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "为了庆祝大家的进步，同时也是为了让全体魔界人无论身在何处，都能随时想起茶话会的快乐，本魔神特地创造出了一道全新的美食！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "锵锵~！它的名字是“烬色魔纹千层酥”——这次不是梦子酱提供的食谱，而是我在吃透“黯月魔境慕斯”的制作方式之后灵机一动，自行研发的！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "居然是神绮小姐自己创新的料理吗？听起来料理技术又上升了呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "哼哼，本魔神可是非常有钻研精神的哦！这道甜品是以本魔神的翅膀为原型设计的，我这就把制作方法教给你~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "这样一来，又能做出全新的料理请大家品尝了呢！具体制作方式神绮小姐能告诉我吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "制作这道点心要用到面粉、鸡蛋、可可豆和黄油。味道虽有些许苦涩，但是一口下去，满口都是香脆的酥皮，简直是人间美味！最顶层还有本魔神的防伪标志——一大块做成魔神之翼形状的黑巧克力。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 20,
-          "position": "Right",
-          "text": "哇，光是听着就感觉好好吃……我会努力试着做出来的！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 13,
-          "position": "Left",
-          "text": "呼呼，我希望对全体魔界住民来说，无论身在何处，一吃到它就能想起魔界的美好，想起自己的故乡，感慨一句“这就是魔界的味道”。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "不错，很有小巧思嘛。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "除此之外，我以后还打算用这个招待外界的宾客。以往我招待宾客都是用魔法制作料理，仔细想来，未免有些不太尊重——外界的宾客跨越瘴气结界，不远万里前来拜访，但我只是花了几秒钟biu~地一下就做好了招待他们的食物，似乎有种付出不对等的感觉呢……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Right",
-          "text": "神绮小姐也不必贬低自己啦，毕竟那种随时随地变出心中所想之物的魔法，听起来就不简单……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "无论如何，本魔神已经下定决心了，小琪琪快试着制作一下吧，也能见证我的研究成果！试验成功以后我就能亲自下厨了！待我完全掌握技巧，第一个招待的贵客就是小琪琪你哦~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "贵客！？我……我吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "当然啦，和小琪琪聊天超级开心的说！我也汲取到了不少新灵感呢。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "总觉得，和神绮小姐的距离拉近了不少呢。"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV2_002",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "神绮小姐，我来做烬色魔纹千层酥的回访啦。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Left",
-          "text": "这居然是，我不用魔法就能吃到的美食吗？酥的鲜香，可可的苦涩，还有果酱的酸甜——每一种味道都恰到好处，巧克力也是我最喜欢的果仁款，满满的高级感，实在是很难不给好评啊~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 8,
-          "position": "Right",
-          "text": "作为神绮小姐亲自设计的料理，我在制作过程中也发现，其中每一道工序、每一种食材都十分考究。没想到在这么短的时间里，神绮小姐就能从料理外行蜕变成设计大师，不愧是创世神呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 4,
-          "position": "Left",
-          "text": "谢谢认可啦～说到这个，我正打算用全新的食材打造一道梦幻的西式料理，也想用它来作为料理制作修行的收尾！小琪琪就等着吧！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "是之前所有训练浓缩而成的精华吗？实在是非常令人期待呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "没错，而且既然是用来招待客人的料理，那当然要用魔界特有的上好食材，让客人都感受到魔界的魅力！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Right",
-          "text": "说起来，神绮小姐似乎很喜欢西式料理的样子？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "因为西式料理就是很赞啊，尤其是甜点，充斥着梦幻、华丽和甜蜜的气息，宛若来到童话世界——就和现在的魔界一样呢。小琪琪应该也能发现，许多魔界人都用着西式名字……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Right",
-          "text": "真的耶，而且魔界的大家似乎也爱举办西式风格的茶话会。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "新的料理究竟会是什么呢？已经开始忍不住期待了啊……"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV3_001",
-      "dialogList": [
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "让我看看，这里应该还能再改进一下……嗯，就这么办吧~"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Right",
-          "text": "<i>（神绮捧着一个精致的笔记本——檀绯色的封面点缀着烫金，红黑交织的花纹泛着好看的光泽，其中似有魔力在涌动）</i>"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 22,
-          "position": "Right",
-          "text": "咦，神绮小姐手里的是……？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "喔，这个是我的创造手记啦，每次有新的灵感，我都会马上写到里面，然后再一点一点地完善……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "最强魔界人梦子酱的背后，也是本魔神无数次的修改哒！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "对创造主来说，有一位忠诚可靠又让人安心的伙伴实在是再完美不过了，真是令人羡慕的事情啊。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "完美？这倒是让本魔神想起了一些往事呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Left",
-          "text": "我其实来自一个各方面都极度不完美的世界，那里充斥着疾病和战争，到处乌烟瘴气，居民们也都痛苦万分。怀着“魔也可以成为神”的想法，我每天都努力修行，精进自己的魔法，终于拥有了三对强大的翅膀，得以离开那里。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "六翼居然是修炼出来的吗，好厉害！真是没想到呢，神绮小姐居然有着这样的过去……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "是啊，只不过人外有人，天外有天。我仅仅是魔界的创世神，然而却有维度更高的造物主创造了包括魔界和幻想乡在内的整个世界……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "……咳，扯远了。总之，逃出来以后，我发誓要创造一个完美的世界，要给予我的住民们至高的幸福，而我也确实做到了——由我创造的新世界资源充足，没有任何争斗，而我的造物们又个个心地善良、爱好和平。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "除此之外，这里也没有任何天灾，还有着天然的瘴气作为结界一般的存在，足以抵御外敌，让人们一直安居乐业。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "原来，传说中的理想国是真实存在的吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "呵呵呵，并没有那么理想……随着时间流逝，我逐渐发现了一些严重的问题。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "尽管我给了这个世界和平、安宁与无限的资源，这个世界的文明却并没有像我想的那样逐渐壮大。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Left",
-          "text": "更坏的是，由于长期处在极度安逸的环境中，这里的住民没有任何进步的动力，一个接一个都变成了笨蛋……最后，我只能怀着愧疚予世界以新生。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "听上去怪吓人的啊。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "是呢，那个重获新生的世界正是魔界的雏形。从那时候起我就意识到，过于完美也不见得真的就是完美，反而是“不完美”让世界有了更多生气。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "而且，如果大家都是一模一样的完美存在，可就少了很多乐趣啦。小琪琪你应该也注意到了吧，魔界的居民们其实或多或少都有着自己的那份“不完美”，那正是我在之后的创造生涯中特意“倾注”给她们的。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Right",
-          "text": "舞小姐、雪雪酱……唔，难道说就连最完美的梦子也有不完美的一面吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 9,
-          "position": "Left",
-          "text": "是的哦，虽然梦子酱是我最伟大的创造，也是我最珍贵的宝藏，但是她过于认真要强，无论是工作还是其他什么方面都一丝不苟，于人于己都苛求做到极致——甚至有时候连我摄入的卡路里都要严格控制，呜呜我的蜜瓜芭菲啊~"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "也正因为如此，她每天忙前忙后，已经算是操劳过度了，即使是这样也不愿意给自己放个假。一些魔界人甚至私下叫她“可悲的人偶”……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Right",
-          "text": "原来如此，怪不得之前我提到“完美”一词的时候，神绮小姐才有这么大的反应呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Left",
-          "text": "是啊，我真的很心疼她。这孩子有些倔，只要是为了我，什么事都愿意干，狠劲上来，怕是十个我都拦不住她，当年灵梦一行人来魔界时，也是她第一时间冲上来护在我身前……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "所以我才默许了她来帮你打下手。一方面是找机会给她放个假，另一方面是希望她能认识到“不完美”未必是坏事。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "做菜也是如此呢。我以前总是想着做出完美的料理，火候调味都要精准到极致，把自己折磨得特别辛苦。可后来发现，偶尔的小偏差和不一样的小搭配，有时候反而让料理有了独特的风味……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "创世和做菜果真有很多共同点的说~"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "所以啊，后来我明白了，比起追逐遥不可及的所谓完美，果然还是抓住当下的小小幸福更好一些。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "意识到这一点之后，我想这份以幸福为灵感的终极食谱也可以算是完成了。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "啊，是神绮小姐提到过的新食谱！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "其名为“樱绯星屑缀玉烩饭”。它的原型是外界被称为“Risotto”的烩饭料理，用糯米与帕尔马芝士糅合，加入辣椒碎与菌菇碎炒热，最后撒上香香的花瓣就完成啦。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "总之是一道量大管饱的甜辣系料理~菌菇碎象征魔界繁星点点的夜空，花瓣和辣椒碎代表幻想乡漫野的春花，而米饭则代指我们的日常生活。无论是魔界还是人间界，平凡的日常生活中都蕴藏着无限的美好，足以让我们驻足欣赏，品味花香，发现其中的小惊喜。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "仔细想想，正是这些细小的食材共同造就了它的美味，幸福也像这样藏在一点一滴的平凡日常里……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 4,
-          "position": "Right",
-          "text": "真是道意义非凡的料理。忽然就感觉浑身充满了干劲呢，制作什么的就包在我身上吧！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 11,
-          "position": "Right",
-          "text": "（平凡的幸福吗……对我来说，或许正是看见食客脸上洋溢的微笑。不管怎样，为了神绮小姐的笑容，加油吧！）"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV3_002",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "神绮小姐，我来做樱绯星屑缀玉烩饭的回访啦。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 11,
-          "position": "Left",
-          "text": "……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 22,
-          "position": "Right",
-          "text": "神绮小姐……？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 11,
-          "position": "Left",
-          "text": "………………"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "怎么了怎么了，是味道和想象中的有差距吗！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Left",
-          "text": "啊啊抱歉，是小琪琪做得太好吃了，我一回味起那个口感，就好像回到了最初品尝它的那一刻！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Left",
-          "text": "糯米裹着芝士的甜，花瓣上的露水味与清香，与鲜嫩多汁的菌菇碎一道入口，配上这份微辣简直完美！那个甜辣交织的风味，真的好想好想再尝一次呢！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "欸嘿嘿，那就再好不过了！神绮小姐太会夸了，我都要不好意思啦……神绮小姐如果还想再品尝的话，不如……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "没事啦，经过这段时间的修行，我只要吃一口料理就能知道它的食材成分、制作步骤以及烹饪时间。无论是怎样的珍馐佳肴，我都能完美复现出来！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "好厉害！既然如此，神绮小姐已经可以自己制作樱绯星屑缀玉烩饭了呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "没错没错。不仅仅是这个，每天晚上小琪琪招待我的不同料理，我也全都能完美掌握啦！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "真是再好不过啦！也就是说，料理修行……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "大成功！真的是多亏了有小琪琪一直帮助我呢！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Right",
-          "text": "等等，这也就意味着……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Left",
-          "text": "小琪琪怎么突然一副要哭了的表情，这应该是值得庆祝的时刻才对吧？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 2,
-          "position": "Right",
-          "text": "既然神绮小姐已经能够仅凭味觉就掌握任何料理，也就意味着以后很难有机会来夜雀食堂光顾了吧……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Left",
-          "text": "唔嗯，恰恰相反，料理修行还没有正式告一段落呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "虽然我说过，什么珍馐都能复现出来，但是全魔界……啊不，全幻想乡！只有小琪琪一个人掌握了那么多的食谱。无论是山珍海味、家常小炒还是异界的稀有料理都会制作。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "所以，为了尽快掌握更丰富多样的食谱，本魔神已经决定了，在修行正式结束之前要经常来光顾！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "嘿嘿，那真是太好啦！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 4,
-          "position": "Right",
-          "text": "我也要打起十二分精神招待神绮小姐！"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_Welcome_001",
-      "dialogList": [
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "啦啦哩，啦啦噜~小琪琪，今晚也来陪本魔神研究“不依赖魔法的美食”吗？"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_Welcome_002",
-      "dialogList": [
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "哦呀？是小琪琪！本魔神刚刚又往创造手记里记了一条新灵感哦，嘿嘿~"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV1_Chat_001",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 21,
-          "position": "Right",
-          "text": "您是……创造了魔界的神明大人吗？我听许多人提起过您呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "哦呀？确实呢，本魔神已经在许多故事书中闪亮登场过了~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "原来是这样……我……呃，抱歉，我有点太紧张了……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "即使是神，保持平常心也很重要，所以不用那么拘束啦。啊，忘了做自我介绍呢，叫我神绮就好。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "原以为是只会出现在童话中的存在，如今却站在我面前，真是不可思议……"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV1_Chat_002",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 21,
-          "position": "Right",
-          "text": "我听说魔界的一切，包括自然环境、地势地貌，以及魔界的居民，都是由神绮小姐一人创造的，是真的吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "正是如此~所以才会有许多人把我视为母亲般的存在啊。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "好厉害……不过魔界那么大，管理起来不会很困难吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "的确呢~不过，作为创世神，我不会过多地干涉这个世界的秩序。每位魔界人都是自由的，可以成为自己想成为的样子。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "真好啊，如果有机会的话，我也想去魔界的地方都市看看那边的风景呢。"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV2_Chat_001",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Right",
-          "text": "说起来，我之前听一些客人说，魔界满是瘴气，是片荒芜的不毛之地，而且到处都有可怕的怪物……这是真的吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "嚯嚯，那只是表象而已。既然小琪琪你已经来魔界开过店，也结交了不少朋友，那我反问你，你眼中的魔界又是何种景象？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "在我眼里，魔界拥有高度发达的魔法文明，大家也都安居乐业。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "生活在这里如同置身童话世界一样惬意，而且也非常适合度假，和其他人描述里可怕的样子完全不同呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "没错，人云亦云的事不一定就是真相。如果没有亲自确认，就不能轻易下结论呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "实际上，魔界指的并不是“魔物的世界”，而是“魔法的世界”，因此是个修行魔法的好去处呢~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 20,
-          "position": "Right",
-          "text": "果然，只有亲身经历之后才好得出结论啊。即使从别人那里学到了正确的知识，也要通过实践内化成自己的东西才行。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "做菜也是一样，只懂得理论却不尝试制作，就绝对无法做出完美的料理呢。"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV2_Chat_002",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Right",
-          "text": "那个，神绮小姐，其实我有一点非常好奇。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "嗯~？是什么事呢？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "身为魔界之主，您可以说是坐拥无上的名誉和地位。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 13,
-          "position": "Right",
-          "text": "许多人穷尽一生追寻的东西，您全都拥有了。这样一来，平日里不会感到无聊么……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "哼哼，那自然是不会的。对我来说，创造的旅途没有终点，每一站都有新的收获~"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "别忘了，本魔神现在的目标正是“不依赖魔法也能做出美食”呀！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "的确如此，某种意义上，烹饪也是一种“创造”的形式呢。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Right",
-          "text": "神绮小姐有这样的干劲，做什么都会成功的！"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV3_Chat_001",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "咦，有人在发传单？让我看看是什么……计划一场终身难忘的旅行——魔界旅行社火爆开张？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "哦？传单居然已经发到这里了么，看来今晚要给负责人加鸡腿了~"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "没错，这个旅行社正是本魔神开的哦！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "欸欸，神绮小姐怎么突然想到要开旅行社？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Left",
-          "text": "当然是为魔界人的安全着想啦~不规范管理的话，无法保证秩序不说，像之前那次，还害我被四个从外界来的家伙揍了一顿……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "原来如此，神绮小姐真用心啊。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "（总觉得我应该认识神绮小姐说的这四位……算了，还是别问了）"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV3_Chat_002",
-      "dialogList": [
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Left",
-          "text": "老板娘，快来看这个！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "这是……我？真像啊，是神绮小姐画的吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "Bingo！答对了~"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "毕竟这是少数不用魔法也能勉强及格的方面……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "勉强及格？神绮小姐明明画得这么可爱，而且，能使用那么多种魔法本身就很厉害了，不是吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Left",
-          "text": "呜呜，有时候会觉得我的自信完全是魔法带来的呢……不过还是谢谢老板娘啦，本魔神会继续努力的~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "（即使强大如魔界之主，似乎也有不够自信的一面呢……）"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV4_Chat_001",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "总觉得神绮小姐的发型很独特呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "小琪琪真有品哇～这可是本魔神亲自设计的发型，长长的头发很显淑女感，而小辫子又增添了几分可爱气息，很符合我吧？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "太符合啦，而且超级显眼的。我在命莲寺和魔法森林开店的时候，即使隔着老远的距离也能瞬间认出来呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 4,
-          "position": "Left",
-          "text": "只是刚好路过，刚好路过而已……这也能被发现的吗！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "是啊，毕竟除了神绮小姐，还有谁留着如此有特色的小辫……诶，等一下，那位粉毛魔界人貌似也有差不多的发型？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "你是说萨拉？噢，她负责守护魔界入口，觉得自己算是魔界的门面，所以形象上当然也要向我看齐……她是这么和我说的。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "这几天她都在利用闲暇时间旅游，说是想向红魔馆的门卫取取经。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "啊，说到旅游，最近魔界旅行社的生意越来越红火了，为此我设计了一个导游小旗子，还专门做了一顶帽子，方便带领游客参观魔界！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "原来神绮小姐是亲自担任导游，带领大家参观吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "没错，因为平时魔界人可以很轻松地开传送门出去旅游，但是外界的人却很少有机会进入魔界。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "因此，我打算亲自给大家介绍这里的环境，把魔界最美好、最真实的一面介绍给大家！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "神绮小姐真是尽职尽责呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Left",
-          "text": "没错~绝对不是因为之前喊雪雪担任导游的时候，她把冰雪世界的地图拿反了，结果让大家齐刷刷掉进湖中央的冰窟窿里……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "听起来这才是真实原因吧！"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV4_Chat_002",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 22,
-          "position": "Right",
-          "text": "神绮小姐之前提到过，魔界的小公主们都喜欢往外界跑。那么与之相对，有没有外界人来魔界定居的情况呢？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "虽说魔界最外层有瘴气作为结界，不过确实有不少类似的案例。比如，有一位“月之天使”——也是我的老熟人萨丽艾尔，就长期定居在魔界地方都市呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "除此之外，很久以前还有一位德高望重的外界僧侣被封印在魔界，被封印的原因好像是……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "这个故事我好像在哪里听过来着？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Left",
-          "text": "糟了，我答应过她要保密的，咳……话说回来，也有很多魔法使不远万里跨越结界，来到魔界修炼，以精进自己的魔法呢。比如，老板娘应该认识爱丽丝酱吧。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "啊，是那位住在魔法森林里的超厉害的人偶使吧！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "是呢。想当初，还是人类的爱丽丝酱，就是追着一只小鸽子掉进鸽子洞，误打误撞来到了魔界，从那之后才正式踏上魔法使的修行之路~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "原来爱丽丝还有这样的过往吗？话说这段故事我似乎也在哪里听到过的样子……"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_Request_Ingredient",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "神绮小姐，我有一个问题！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "唔嗯，是什么问题呢？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Right",
-          "text": "既然魔界有着如此独特的环境，那么产出的食材应该也和外界大不相同吧？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "啊哈，确实有一部分食材是魔界独有的，比如星形草、高岭冰块、法力香料……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 7,
-          "position": "Right",
-          "text": "这么多！脑袋要晕啦！有没有什么魔界特产可以做料理的配料呢？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "当然有啦，有一种叫做噗噗哟花所结出的噗噗哟果实。平时在魔界，无论是茶话会还是电影放送之夜，大家都会把它当作甜点下饭呢！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "噗……噗噗哟果？那不就是幽幽子小姐之前吃过的欲望之果吗？那种恐怖的东西当成甜点吃真的没关系吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Left",
-          "text": "恐怖？可是明明很美味呢，而且吃下去后，还会感觉魔力大增、浑身充满力量～"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Right",
-          "text": "根据魅魔小姐所做的实验来看，噗噗哟果会放大内心的欲望，因此对很多种族都会有可怕的后果呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Left",
-          "text": "欸欸，原来是这样一回事吗？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "神绮小姐身为魔界之主，在这方面竟意外地天然呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "毕竟，我对魔界的理念就是无为而治~之前看到你和魅魔一起采集了不少，还以为是作为特产带回去吃了。我随身带了一点，你还需要吗？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Right",
-          "text": "不不不，那种恐怖的东西我是再也不会想要了。还有其他的吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 11,
-          "position": "Left",
-          "text": "唔，真没办法呢。（咬一口噗噗哟果）要不我另外找点魔界的普通食材让你带回去吧。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "哈啊——真是麻烦神绮小姐您了。"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_Request_Beverage",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 9,
-          "position": "Right",
-          "text": "大家都说来魔界旅游，最推荐体验的项目就是魔界的特色茶话会呢。正巧，前面就有一个小推车，或许现在去还能赶上！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "说起来，明明是茶话会，为什么只有一个打扮得像仙女姐姐一样的人参加呢？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "我听到了哦，仙女姐姐~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "欸，原来是神绮小姐！……话说回来，神绮小姐为什么一个人在举办茶话会？其他魔界人呢？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 7,
-          "position": "Left",
-          "text": "才不是！这可不是茶话会呀，你看旁边这个展板！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "唔，看不明白……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "上面写的是“魔界特调爱心饮品”哦！我这是在搞义卖啦~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "（看小推车上的饮料数量，好像基本没卖出去的样子……）"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "本魔神最近学会了饮料调制，喝起来不能说超级美味，但也算还不错的程度了，就想着让市场检验一下。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Left",
-          "text": "结果不知是谁，把我之前做黑暗料理的事儿捅了出去，到头来根本没人敢买，实在是太悲伤了……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "都有些什么样的饮品呢？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "这个是“魔神特调青汁”，可以健胃消食。这个是“广藿香白花蛇舌草mocktail”，可以消暑降温。还有这个——"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "听名字感觉都很像黑暗料理。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Left",
-          "text": "怎么可能！小琪琪尝一下就知道了！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Right",
-          "text": "……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "唔，口感确实不错，或许是产品命名方面让大家望而却步了。只能说刻板印象真的很害人吧，明明神绮小姐手艺这么好，而且还费尽心思搞义卖……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 4,
-          "position": "Left",
-          "text": "唉，谢谢老板娘的安慰。反正应该也没人买了，带回去也不是那么方便，干脆全部送给老板娘好了～"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "啊哈哈，那我就心怀感激地收下了……（这算是意外收获吗？）"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_Invite_Succeed",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 22,
-          "position": "Right",
-          "text": "神绮小姐，今天晚上有空吗？咦，这是在写日记？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Left",
-          "text": "小琪琪来得正好，先站好不要动，一分钟就好！（拿着笔对着米斯蒂娅一番比划，然后开始在日记本上做记录）"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Left",
-          "text": "嗯……这个地方这样（唰唰唰），不对，好像是这样（涂抹）？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "神绮小姐在忙什么呢？又有新的创作灵感了吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "唔嗯，本魔神正在尝试写一本小说，内容取自本魔神在人间界的各种游历趣事。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "原来神绮小姐还会写书么？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "那是！目前根据魔界人的投票，标题暂定为《神绮的幻想乡大冒险》！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "都有些什么样的游历趣事呢？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "比如，其中有一整节讲的是本魔神偶然遇到一位高人，在她的指点下，努力克服万难，最后学会自己制作美味料理的故事！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 20,
-          "position": "Right",
-          "text": "听起来，好像是以我们的故事为灵感设计的剧情呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "没错，这位高人正是以小琪琪作为原型设计的。所以我刚刚才让你当了模特，在一分钟内画出了初版的设计草稿呢！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "神绮小姐居然连速绘都掌握了吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "嗯哼，猜猜为什么魔界人都多多少少有着自己的天赋和爱好呢？作为魔界之主，肯定要在力所能及的领域成为她们的榜样呢~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "所以，我能看看神绮小姐画的吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Left",
-          "text": "欸嘿，当然没问题呀！快看快看，这是一个妖怪美少女，她有两个头，十只脚，三对翅膀，八只手，每只手上都拿着不同的厨具……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "喂喂，这个跟我差太多了吧……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "但是但是，如果不这样设计的话，如何体现出像小琪琪那般，同时制作六道不同的料理、一秒钟给八桌顾客同时上菜的厨艺大师啊！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "等我写完了就给老板娘看看，如果我到时候还能想起这件事的话……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "（小声）这种听着就好恐怖的事情，一定不要想起来啊！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Left",
-          "text": "嗯？小琪琪说什么了吗？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "呃，那个，神绮小姐写小说也辛苦了，不如转换一下心情，晚上来我这里吃一顿好的吧！我会为你准备一些你还没尝过的料理……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "那就再好不过啦！思考再多，也还是要实地考察呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Left",
-          "text": "本魔神一定要亲自前来观摩小琪琪的料理制作过程，写清楚这位世外高人如何熟练运用八只手上各不相同的厨具制作料理，以及她如何精准地运用十只脚，将每一道料理踢向不同的顾客，同时还能保证料理不洒出来！真是令魔期待！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "神绮小姐的钻研精神和创作欲实在是太恐怖了！求断更！"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_Invite_Failed",
-      "dialogList": [
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 22,
-          "position": "Right",
-          "text": "神绮小姐，今天晚上有空吗？咦，这是在写日记？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Left",
-          "text": "小琪琪来得正好，先站好不要动，一分钟就好！（拿着笔对着米斯蒂娅一番比划，然后开始在日记本上做记录）"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Left",
-          "text": "嗯……这个地方这样（唰唰唰），不对，好像是这样（涂抹）？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "神绮小姐在忙什么呢？又有新的创作灵感了吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "唔嗯，本魔神正在尝试写一本小说，内容取自本魔神在人间界的各种游历趣事。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "原来神绮小姐还会写书么？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "那是！目前根据魔界人的投票，标题暂定为《神绮的幻想乡大冒险》！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "都有些什么样的游历趣事呢？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "比如，其中有一整节讲的是本魔神偶然遇到一位高人，在她的指点下，努力克服万难，最后学会自己制作美味料理的故事！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 20,
-          "position": "Right",
-          "text": "听起来，好像是以我们的故事为灵感设计的剧情呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "没错，这位高人正是以小琪琪作为原型设计的。所以我刚刚才让你当了模特，在一分钟内画出了初版的设计草稿呢！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Right",
-          "text": "神绮小姐居然连速绘都掌握了吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "嗯哼，猜猜为什么魔界人都多多少少有着自己的天赋和爱好呢？作为魔界之主，肯定要在力所能及的领域成为她们的榜样呢~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "所以，我能看看神绮小姐画的吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Left",
-          "text": "欸嘿，当然没问题呀！快看快看，这是一个妖怪美少女，她有两个头，十只脚，三对翅膀，八只手，每只手上都拿着不同的厨具……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Right",
-          "text": "喂喂，这个跟我差太多了吧……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "但是但是，如果不这样设计的话，如何体现出像小琪琪那般，同时制作六道不同的料理、一秒钟给八桌顾客同时上菜的厨艺大师啊！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "等我写完了就给老板娘看看，如果我到时候还能想起这件事的话……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "（小声）这种听着就好恐怖的事情，一定不要想起来啊！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Left",
-          "text": "嗯？小琪琪说什么了吗？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "呃，那个，神绮小姐写小说也辛苦了，不如转换一下心情，晚上来我这里吃一顿好的吧！我会为你准备一些你还没尝过的料理……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "唔，虽然确实肚子饿了想吃甜品，但是本魔神如果不能写清楚这位世外高人是如何在我不小心炸掉厨房、最需要帮助的时候，用三对翅膀宛如天使一般缓缓降落到我面前，然后用两个不同的脑袋，一个询问我原因，另外一个思考解决方法，最后成功帮我摆脱困境……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "别想那么多啦，还是吃饭要紧！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Left",
-          "text": "不行不行，如果小说的细节不清楚导致逻辑产生了硬伤，读者们会感到很困惑的！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "我要努力回忆当初和小琪琪的第一次相遇，一定要写清楚前因后果才能去吃蜜瓜芭菲！等我写完了就来——本魔神向你保证！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "神绮小姐的钻研精神和创作欲实在是太恐怖了！求断更！"
-        }
-      ]
-    },
-    {
-      "name": "_ResourceExample_Kizuna_Shinki_LV4_001",
-      "dialogList": [
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Left",
-          "text": "噔噔滴，噔噔咚，噔滴噔咚噔噔哒~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "神绮小姐，发生什么事了，这么高兴呀？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "啊，是小琪琪来了。我有一个好消息、一个特别好的好消息，以及一个超超超级好的消息，你要先听哪个？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 8,
-          "position": "Right",
-          "text": "欸欸，那我先听好消息吧……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "那就是，由于小琪琪长期为我提供各种各样的美味，本魔神终于可以自豪地宣布——以“不用魔法也能做出美食”为目的的修行终于可以告一段落了。本魔神终于成功啦！就算全程不用魔法，也能复现世界各地的美食了哦！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "哦哦！恭喜！神绮小姐辛苦啦~"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "哼哼，真是超级感谢小琪琪啊。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 20,
-          "position": "Right",
-          "text": "能帮到神绮小姐是我的荣幸呢。而且魔界的大家品尝到神绮大人的料理都很满意呀。比如雪雪每次都会给你的食谱打五星好评，然后不停地续单，说是回想起了家乡的味道呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "嘿嘿，雪这可爱鬼，很久以前在茶话会上也喜欢这样大快朵颐……真叫人怀念呢。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "原来雪雪以前就是这个样子啊……话说第二件特别好的好消息是什么呢？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Left",
-          "text": "那就是——因为再也不用大修厨房，被梦子夸奖了！吼吼吼吼！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Right",
-          "text": "嗯…对于厨房以及梦子小姐来说确实是个好消息呢……被自己的造物欣慰地夸奖，真是很有神绮小姐的风格呢。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 20,
-          "position": "Right",
-          "text": "那么最后那个超超超级好的消息是……？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "这个呀，我最近其实还试着开了卖樱桃系甜点的小摊……嗯，梦子酱说老是宅家真的很不好，不如出来体验生活。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "没想到呀没想到，我的甜品在魔界都要卖爆了，大家都喜欢的不得了，目前正在考虑开设幻想乡分店呢。嗯……我看老板娘手艺了得，是个人才，不如就把老板娘抓来做分店店长为我打工吧，哼哼哼……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Right",
-          "text": "哎哎， 神绮小姐，你知道的，每天晚上我都有自家的工作要干，除此之外还要建设乐队，如果再加上更多兼职的话——"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 12,
-          "position": "Left",
-          "text": "哈哈哈，当然是开玩笑的啦，本魔神怎么可能这么邪恶嘛~"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 13,
-          "position": "Left",
-          "text": "哎，闲不下来，根本闲不下来~明明上一个目标才完成不久，本魔神又有新点子了……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "神绮小姐还真是干劲满满呐，这次又是什么样的点子呢？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "啊，是关于酒精饮料的……"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 22,
-          "position": "Right",
-          "text": "酒精饮料么，可我记得神绮小姐是不喝酒的吧。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 5,
-          "position": "Left",
-          "text": "哼，本魔神自然是滴酒不沾的，奈何身边的极个别家伙就喜欢喝酒上头，徒弟经常不在家，到头来还要我去收拾烂摊子，真是伤脑筋呢——不过，也正是这个启发了我的灵感……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 3,
-          "position": "Left",
-          "text": "我想要研制一种不含酒精的全新饮料，既能拥有酒精饮料的爽感，又不会影响意识、对身体造成过多损害。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 10,
-          "position": "Right",
-          "text": "原来如此，是个好想法呢。如果能研究出不伤身体的平替饮品，恐怕连因酒而起的灾祸都会少很多吧。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 1,
-          "position": "Left",
-          "text": "老板娘能理解我真是太好了~只是享受着崇拜什么的，也太不符合本魔神的哲学了，多少想为大家做点什么呢。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "对了，说到“崇拜”，我有一样东西要给你。"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 0,
-          "position": "Left",
-          "text": "<i>（神绮稍微施展魔力展开传送门，从传送门中掉下来一个雕像）</i>"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Left",
-          "text": "锵锵！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 22,
-          "position": "Right",
-          "text": "这是，神绮小姐的雕像？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 18,
-          "position": "Right",
-          "text": "嗯……精致的同时又透着几分威严和可爱，完全就是神绮小姐的风格嘛。"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "这个也是神绮小姐的手笔，对吧？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "是的哦~这个雕像可是本魔神亲手制作的——毕竟，雕刻也是艺术创作中的重要一环呢。这尊雕像有着造物主独有的无穷魔力……正巧，听说老板娘要和搭档一起开演唱会，或许它能给老板娘带来好运也说不定呢~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 21,
-          "position": "Right",
-          "text": "这么贵重的礼物，我真的能收下吗？"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 15,
-          "position": "Left",
-          "text": "当然啦，这段时间多亏了小琪琪的陪伴和指点，我真是受益匪浅呢，犹如鹈鹕灌饼。如此多的珍贵回忆，可是用再多的金钱与魔法也换不来的！"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 16,
-          "position": "Right",
-          "text": "我也得感谢神绮小姐呢。实不相瞒，我有一首新歌正是以神绮小姐为灵感……"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 6,
-          "position": "Left",
-          "text": "什么，还有本魔神的事？"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 19,
-          "position": "Right",
-          "text": "总之，作为回礼，这张演唱会的VIP贵宾票就请神绮小姐收下啦！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 14,
-          "position": "Left",
-          "text": "哇哦，平时在魔界欣赏的都是茶会后的舞台剧演出，人间界的演唱会什么的，我还没去过呢。就让我好好鉴赏一番吧，说不定，本魔神还能帮忙整点演出特效嘞，嘿嘿~"
-        },
-        {
-          "characterId": 34,
-          "characterType": "Special",
-          "pid": 8,
-          "position": "Right",
-          "text": "好喔，那就演唱会上见啦。能为神绮小姐这样的尊贵客人献唱，也是我的荣幸呢！"
-        },
-        {
-          "characterId": 9004,
-          "characterType": "Special",
-          "pid": 17,
-          "position": "Left",
-          "text": "真是期待，即将到来的演唱会，又能给我的创作带来怎样的新灵感呢——"
-        }
-      ]
     }
   ],
   "gifts": [
@@ -28849,64 +28918,6 @@
       "postRewards": [],
       "postMissionsAfterPerformance": [],
       "postEvents": []
-    }
-  ],
-  "spells": [
-    {
-      "id": 11001,
-      "implementation": "Mai",
-      "vfxBundle": "assets/Spell/11001",
-      "positive": {
-        "name": "冰符「冰晶特调」",
-        "description": "接下来30秒，持续使用冰系魔法制作饮料，为在场普通订单提供对应的酒水",
-        "portrait": "assets/Character/11001/Portrait/0.png"
-      },
-      "negative": {
-        "name": "霜符「冰川急冻」",
-        "description": "接下来30秒，所有顾客的点单料理必须额外包含「凉爽」tag，否则评价至多为「普通」",
-        "portrait": "assets/Character/11001/Portrait/5.png"
-      }
-    },
-    {
-      "id": 10001,
-      "implementation": "Minoriko",
-      "vfxBundle": "assets/Spell/10001",
-      "positive": {
-        "name": "丰符「大年收获者」",
-        "description": "展开「丰穣结界」，持续20s。期间新制作的料理附加「饱腹」标签，原本带有「饱腹」标签的料理立即完成；「清酒」标签的酒水数量变为无限。",
-        "portrait": "assets/Character/10001/Portrait/1.png"
-      },
-      "negative": {
-        "name": "秋符「无常秋日与少女之心」",
-        "description": "让当前场上的顾客感到饱腹，最大点单数减少1次。立即结束正在持续的「丰穣结界」。",
-        "portrait": "assets/Character/10001/Portrait/3.png"
-      }
-    }
-  ],
-  "buffs": [
-    {
-      "id": 11002,
-      "name": "冰晶特调",
-      "description": "持续使用冰系魔法制作饮料，剩余$c秒",
-      "icon": "assets/Buff/11002.png"
-    },
-    {
-      "id": 11003,
-      "name": "冰封酒宴",
-      "description": "顾客对不含有$a的料理评价至多为$b，剩余$c秒",
-      "icon": "assets/Buff/11003.png"
-    },
-    {
-      "id": 10001,
-      "name": "丰穣结界",
-      "description": "新制作的料理附加「饱腹」，原本饱腹的料理立即完成；「清酒」标签的酒水数量变为无限。剩余$a秒",
-      "icon": "assets/Buff/10001.png"
-    }
-  ],
-  "assetBundles": [
-    { "path": "assets/Spell/11001" },
-    {
-      "path": "assets/Spell/10001"
     }
   ]
 }
