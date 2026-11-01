@@ -1,0 +1,40 @@
+name: Check Resource Pack
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: 资源包检查
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Checkout editor
+        uses: actions/checkout@v7
+        with:
+          repository: MetaMystia/MetaMystia-ResourceEx-Editor
+          path: .editor
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Check
+        run: node .editor/scripts/checkResourcePack.ts .
