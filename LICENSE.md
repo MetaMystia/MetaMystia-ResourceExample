@@ -42,7 +42,7 @@ assets/Character/10002/Portrait/0.png
 
 **不属于 MetaMystia 项目的原创资源，也不适用于下文的 CC 许可。**
 
-其中，`assets/Clothes/9001/portrait.png` 部分基于游戏中「【DLC5】海滩度假装」二次创作，也不适用于下文的 CC 许可。
+其中，`assets/Clothes/9003/portrait.png` 部分基于游戏中「【DLC5】海滩度假装」二次创作，也不适用于下文的 CC 许可。
 
 MetaMystia 项目不对这些资源授予任何再分发或二次创作授权。
 

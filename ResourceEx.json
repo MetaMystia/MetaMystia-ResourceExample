@@ -27,7 +27,7 @@
       "Dominare"
     ],
     "description": "MetaMystia 示例资源包 ResourceExample",
-    "version": "0.14.1",
+    "version": "0.14.2",
     "idRangeStart": 9000,
     "idRangeEnd": 12999,
     "idSignature": "aAOXzLVM3OMBvNSCeRVZ4cjaPu6sHwOIlfBB9XB+n2WODMrDb+eCuWZeE88KlXUIAj58ok7Dm2wsTTYJJ6pq8THMcm+FU/ryndeZfy5gCRnY7q3SzXn2s0ChmZKuTRkkWAU0f252a6Z9AXYu4tyv/h+kJGWXO1lFaVg8jErJqUMSlpNGGZe0tZABRPhX1oxPwYH82Lnvg0ct3REguZBEicC0/d5Lh1djvatUK3FdTR2h0rj0JdhInC2rcP8ymIg5txvsPcaA8cCbFdwyPgEaMue2NIjawUKpwLAl8mGwWVHrUTSxahkJ+MVJA7nLOGbYtvxmiyYMPQnDEVynBcPEeA==",
@@ -2197,16 +2197,16 @@
           "_ResourceExample_Kizuna_Shinki_Welcome_002"
         ],
         "lv3Welcome": [
-          "_ResourceExample_Kizuna_Shinki_Welcome_001",
-          "_ResourceExample_Kizuna_Shinki_Welcome_002"
+          "_ResourceExample_Kizuna_Shinki_Welcome_003",
+          "_ResourceExample_Kizuna_Shinki_Welcome_004"
         ],
         "lv4Welcome": [
-          "_ResourceExample_Kizuna_Shinki_Welcome_001",
-          "_ResourceExample_Kizuna_Shinki_Welcome_002"
+          "_ResourceExample_Kizuna_Shinki_Welcome_003",
+          "_ResourceExample_Kizuna_Shinki_Welcome_004"
         ],
         "lv5Welcome": [
-          "_ResourceExample_Kizuna_Shinki_Welcome_001",
-          "_ResourceExample_Kizuna_Shinki_Welcome_002"
+          "_ResourceExample_Kizuna_Shinki_Welcome_003",
+          "_ResourceExample_Kizuna_Shinki_Welcome_004"
         ],
         "lv1ChatData": [
           "_ResourceExample_Kizuna_Shinki_LV1_Chat_001",
@@ -2704,6 +2704,24 @@
             "relativeProb": 0.2,
             "onlySpawnAfterUnlocking": false,
             "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 1003,
+            "relativeProb": 0.1,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 1004,
+            "relativeProb": 0.1,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
+          },
+          {
+            "izakayaId": 1005,
+            "relativeProb": 0.1,
+            "onlySpawnAfterUnlocking": false,
+            "onlySpawnWhenPlaceBeRecorded": false
           }
         ]
       },
@@ -3109,7 +3127,7 @@
           },
           {
             "tagId": 27,
-            "request": "我的智慧，连三途川的长度都能计算出来。是不是很不可思议？",
+            "request": "我的智慧，连三途川的宽度都能计算出来。是不是很不可思议？",
             "enable": true
           }
         ],
@@ -11620,7 +11638,7 @@
           "characterType": "Special",
           "pid": 21,
           "position": "Right",
-          "text": "有什么区别吗？神绮小姐还是神奇绮小姐呀？"
+          "text": "有什么区别吗？神绮小姐还是神绮小姐呀？"
         },
         {
           "characterId": 9004,
@@ -11715,7 +11733,7 @@
           "characterId": 9004,
           "characterType": "Special",
           "pid": 12,
-          "position": "Right",
+          "position": "Left",
           "text": "<i>（神绮捧着一个精致的笔记本——檀绯色的封面点缀着烫金，红黑交织的花纹泛着好看的光泽，其中似有魔力在涌动）</i>"
         },
         {
@@ -12142,6 +12160,30 @@
       ]
     },
     {
+      "name": "_ResourceExample_Kizuna_Shinki_Welcome_003",
+      "dialogList": [
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Left",
+          "text": "啦啦哩，啦啦噜~小琪琪，今晚也来陪本魔神研究“不依赖魔法的美食”吗？"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Kizuna_Shinki_Welcome_004",
+      "dialogList": [
+        {
+          "characterId": 9004,
+          "characterType": "Special",
+          "pid": 32,
+          "position": "Left",
+          "text": "哦呀？是小琪琪！本魔神刚刚又往创造手记里记了一条新灵感哦，嘿嘿~"
+        }
+      ]
+    },
+    {
       "name": "_ResourceExample_Kizuna_Shinki_LV1_Chat_001",
       "dialogList": [
         {
@@ -12520,7 +12562,7 @@
         {
           "characterId": 9004,
           "characterType": "Special",
-          "pid": 10,
+          "pid": 28,
           "position": "Left",
           "text": "没错，因为平时魔界人可以很轻松地开传送门出去旅游，但是外界的人却很少有机会进入魔界。"
         },
@@ -22981,7 +23023,7 @@
           "characterType": "Special",
           "pid": 3,
           "position": "Left",
-          "text": "大小姐今晚邀请您前往博丽神社开店，届时妹妹大人也会在那里。"
+          "text": "大小姐请您明晚前往博丽神社开店，届时妹妹大人也会在那里。"
         },
         {
           "characterId": 34,
@@ -22995,7 +23037,7 @@
           "characterType": "Special",
           "pid": 4,
           "position": "Left",
-          "text": "如果今晚妹妹大人不在，那么希望您可以多停留在神社几天。毕竟妹妹大人她……很难去约束。"
+          "text": "如果妹妹大人不在，那么希望您可以多停留在神社几天。毕竟妹妹大人她……很难去约束。"
         },
         {
           "characterId": 34,
@@ -26974,7 +27016,7 @@
     },
     {
       "title": "【绯红契约·三重恐怖】",
-      "description": "【计划的第一步，针对性地抑制芙兰的破坏力。\n以前，在寻找可以陪妹妹大人玩游戏的朋友时，帕秋莉师傅告诉过我，芙兰小姐能力的破坏性来自内心。也就是说，她认为需要破坏的时候，造成的破坏就会更强。所以，我们需要一种压制芙兰内心危险情绪的媒介！此即为【障目】。\n也许我该四处找找其他认识的人或妖怪问问？光凭我的鸟脑袋可能想不出来什么东西……",
+      "description": "计划的第一步，针对性地抑制芙兰的破坏力。\n以前，在寻找可以陪妹妹大人玩游戏的朋友时，帕秋莉师傅告诉过我，芙兰小姐能力的破坏性来自内心。也就是说，她认为需要破坏的时候，造成的破坏就会更强。所以，我们需要一种压制芙兰内心危险情绪的媒介！此即为【障目】。\n也许我该四处找找其他认识的人或妖怪问问？光凭我的鸟脑袋可能想不出来什么东西……",
       "debugLabel": "新任务",
       "missionType": "Side",
       "sender": "_ResourceExample_RemiliaScarlet",
@@ -28132,77 +28174,77 @@
       "id": 9003,
       "name": "花嫁",
       "description": "MetaMystia制作组为感谢玩家支持，特别制作的花嫁礼服。层叠的纯白裙摆缀着海蓝与亮粉色玫瑰，搭配轻薄头纱和双色捧花，穿上之后仿佛化身从天界下凡的天女。无论从哪种角度来看，都是一套值得珍藏的服饰。",
-      "spritePath": "assets/Clothes/9001/icon.png",
-      "portraitPath": "assets/Clothes/9001/portrait.png",
+      "spritePath": "assets/Clothes/9003/icon.png",
+      "portraitPath": "assets/Clothes/9003/portrait.png",
       "pixelFullConfig": {
         "name": "_ResourceExample_Clothes_9001_新衣服1",
         "mainSprite": [
-          "assets/Clothes/9001/Sprite/Main_0, 0.png",
-          "assets/Clothes/9001/Sprite/Main_0, 1.png",
-          "assets/Clothes/9001/Sprite/Main_0, 2.png",
-          "assets/Clothes/9001/Sprite/Main_1, 0.png",
-          "assets/Clothes/9001/Sprite/Main_1, 1.png",
-          "assets/Clothes/9001/Sprite/Main_1, 2.png",
-          "assets/Clothes/9001/Sprite/Main_2, 0.png",
-          "assets/Clothes/9001/Sprite/Main_2, 1.png",
-          "assets/Clothes/9001/Sprite/Main_2, 2.png",
-          "assets/Clothes/9001/Sprite/Main_3, 0.png",
-          "assets/Clothes/9001/Sprite/Main_3, 1.png",
-          "assets/Clothes/9001/Sprite/Main_3, 2.png"
+          "assets/Clothes/9003/Sprite/Main_0, 0.png",
+          "assets/Clothes/9003/Sprite/Main_0, 1.png",
+          "assets/Clothes/9003/Sprite/Main_0, 2.png",
+          "assets/Clothes/9003/Sprite/Main_1, 0.png",
+          "assets/Clothes/9003/Sprite/Main_1, 1.png",
+          "assets/Clothes/9003/Sprite/Main_1, 2.png",
+          "assets/Clothes/9003/Sprite/Main_2, 0.png",
+          "assets/Clothes/9003/Sprite/Main_2, 1.png",
+          "assets/Clothes/9003/Sprite/Main_2, 2.png",
+          "assets/Clothes/9003/Sprite/Main_3, 0.png",
+          "assets/Clothes/9003/Sprite/Main_3, 1.png",
+          "assets/Clothes/9003/Sprite/Main_3, 2.png"
         ],
         "eyeSprite": [
-          "assets/Clothes/9001/Sprite/Eyes_0, 0.png",
-          "assets/Clothes/9001/Sprite/Eyes_0, 1.png",
-          "assets/Clothes/9001/Sprite/Eyes_0, 2.png",
-          "assets/Clothes/9001/Sprite/Eyes_0, 3.png",
-          "assets/Clothes/9001/Sprite/Eyes_1, 0.png",
-          "assets/Clothes/9001/Sprite/Eyes_1, 1.png",
-          "assets/Clothes/9001/Sprite/Eyes_1, 2.png",
-          "assets/Clothes/9001/Sprite/Eyes_1, 3.png",
-          "assets/Clothes/9001/Sprite/Eyes_2, 0.png",
-          "assets/Clothes/9001/Sprite/Eyes_2, 1.png",
-          "assets/Clothes/9001/Sprite/Eyes_2, 2.png",
-          "assets/Clothes/9001/Sprite/Eyes_2, 3.png",
-          "assets/Clothes/9001/Sprite/Eyes_3, 0.png",
-          "assets/Clothes/9001/Sprite/Eyes_3, 1.png",
-          "assets/Clothes/9001/Sprite/Eyes_3, 2.png",
-          "assets/Clothes/9001/Sprite/Eyes_3, 3.png",
-          "assets/Clothes/9001/Sprite/Eyes_4, 0.png",
-          "assets/Clothes/9001/Sprite/Eyes_4, 1.png",
-          "assets/Clothes/9001/Sprite/Eyes_4, 2.png",
-          "assets/Clothes/9001/Sprite/Eyes_4, 3.png",
-          "assets/Clothes/9001/Sprite/Eyes_5, 0.png",
-          "assets/Clothes/9001/Sprite/Eyes_5, 1.png",
-          "assets/Clothes/9001/Sprite/Eyes_5, 2.png",
-          "assets/Clothes/9001/Sprite/Eyes_5, 3.png"
+          "assets/Clothes/9003/Sprite/Eyes_0, 0.png",
+          "assets/Clothes/9003/Sprite/Eyes_0, 1.png",
+          "assets/Clothes/9003/Sprite/Eyes_0, 2.png",
+          "assets/Clothes/9003/Sprite/Eyes_0, 3.png",
+          "assets/Clothes/9003/Sprite/Eyes_1, 0.png",
+          "assets/Clothes/9003/Sprite/Eyes_1, 1.png",
+          "assets/Clothes/9003/Sprite/Eyes_1, 2.png",
+          "assets/Clothes/9003/Sprite/Eyes_1, 3.png",
+          "assets/Clothes/9003/Sprite/Eyes_2, 0.png",
+          "assets/Clothes/9003/Sprite/Eyes_2, 1.png",
+          "assets/Clothes/9003/Sprite/Eyes_2, 2.png",
+          "assets/Clothes/9003/Sprite/Eyes_2, 3.png",
+          "assets/Clothes/9003/Sprite/Eyes_3, 0.png",
+          "assets/Clothes/9003/Sprite/Eyes_3, 1.png",
+          "assets/Clothes/9003/Sprite/Eyes_3, 2.png",
+          "assets/Clothes/9003/Sprite/Eyes_3, 3.png",
+          "assets/Clothes/9003/Sprite/Eyes_4, 0.png",
+          "assets/Clothes/9003/Sprite/Eyes_4, 1.png",
+          "assets/Clothes/9003/Sprite/Eyes_4, 2.png",
+          "assets/Clothes/9003/Sprite/Eyes_4, 3.png",
+          "assets/Clothes/9003/Sprite/Eyes_5, 0.png",
+          "assets/Clothes/9003/Sprite/Eyes_5, 1.png",
+          "assets/Clothes/9003/Sprite/Eyes_5, 2.png",
+          "assets/Clothes/9003/Sprite/Eyes_5, 3.png"
         ],
         "hairSprite": [
-          "assets/Clothes/9001/Sprite/Hair_0, 0.png",
-          "assets/Clothes/9001/Sprite/Hair_0, 1.png",
-          "assets/Clothes/9001/Sprite/Hair_0, 2.png",
-          "assets/Clothes/9001/Sprite/Hair_1, 0.png",
-          "assets/Clothes/9001/Sprite/Hair_1, 1.png",
-          "assets/Clothes/9001/Sprite/Hair_1, 2.png",
-          "assets/Clothes/9001/Sprite/Hair_2, 0.png",
-          "assets/Clothes/9001/Sprite/Hair_2, 1.png",
-          "assets/Clothes/9001/Sprite/Hair_2, 2.png",
-          "assets/Clothes/9001/Sprite/Hair_3, 0.png",
-          "assets/Clothes/9001/Sprite/Hair_3, 1.png",
-          "assets/Clothes/9001/Sprite/Hair_3, 2.png"
+          "assets/Clothes/9003/Sprite/Hair_0, 0.png",
+          "assets/Clothes/9003/Sprite/Hair_0, 1.png",
+          "assets/Clothes/9003/Sprite/Hair_0, 2.png",
+          "assets/Clothes/9003/Sprite/Hair_1, 0.png",
+          "assets/Clothes/9003/Sprite/Hair_1, 1.png",
+          "assets/Clothes/9003/Sprite/Hair_1, 2.png",
+          "assets/Clothes/9003/Sprite/Hair_2, 0.png",
+          "assets/Clothes/9003/Sprite/Hair_2, 1.png",
+          "assets/Clothes/9003/Sprite/Hair_2, 2.png",
+          "assets/Clothes/9003/Sprite/Hair_3, 0.png",
+          "assets/Clothes/9003/Sprite/Hair_3, 1.png",
+          "assets/Clothes/9003/Sprite/Hair_3, 2.png"
         ],
         "backSprite": [
-          "assets/Clothes/9001/Sprite/Back_0, 0.png",
-          "assets/Clothes/9001/Sprite/Back_0, 1.png",
-          "assets/Clothes/9001/Sprite/Back_0, 2.png",
-          "assets/Clothes/9001/Sprite/Back_1, 0.png",
-          "assets/Clothes/9001/Sprite/Back_1, 1.png",
-          "assets/Clothes/9001/Sprite/Back_1, 2.png",
-          "assets/Clothes/9001/Sprite/Back_2, 0.png",
-          "assets/Clothes/9001/Sprite/Back_2, 1.png",
-          "assets/Clothes/9001/Sprite/Back_2, 2.png",
-          "assets/Clothes/9001/Sprite/Back_3, 0.png",
-          "assets/Clothes/9001/Sprite/Back_3, 1.png",
-          "assets/Clothes/9001/Sprite/Back_3, 2.png"
+          "assets/Clothes/9003/Sprite/Back_0, 0.png",
+          "assets/Clothes/9003/Sprite/Back_0, 1.png",
+          "assets/Clothes/9003/Sprite/Back_0, 2.png",
+          "assets/Clothes/9003/Sprite/Back_1, 0.png",
+          "assets/Clothes/9003/Sprite/Back_1, 1.png",
+          "assets/Clothes/9003/Sprite/Back_1, 2.png",
+          "assets/Clothes/9003/Sprite/Back_2, 0.png",
+          "assets/Clothes/9003/Sprite/Back_2, 1.png",
+          "assets/Clothes/9003/Sprite/Back_2, 2.png",
+          "assets/Clothes/9003/Sprite/Back_3, 0.png",
+          "assets/Clothes/9003/Sprite/Back_3, 1.png",
+          "assets/Clothes/9003/Sprite/Back_3, 2.png"
         ]
       },
       "notebookVerticalOffset": 65,
