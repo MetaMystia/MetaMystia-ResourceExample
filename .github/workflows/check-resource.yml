@@ -37,4 +37,22 @@ jobs:
           node-version: 24
 
       - name: Check
-        run: node .editor/scripts/checkResourcePack.ts .
+        run: |
+          mkdir -p check-report
+          node .editor/scripts/checkResourcePack.ts . --report check-report/report.md
+
+      # 供 comment-check-resource.yml 在 PR 中发布结果。
+      - name: Save PR number
+        if: ${{ !cancelled() && github.event_name == 'pull_request' }}
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: echo "$PR_NUMBER" > check-report/pr-number
+
+      - name: Upload report
+        if: ${{ !cancelled() && github.event_name == 'pull_request' }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: resource-pack-check
+          path: check-report/
+          if-no-files-found: ignore
+          retention-days: 7

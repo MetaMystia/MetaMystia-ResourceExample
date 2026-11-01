@@ -1,0 +1,59 @@
+name: Comment Resource Pack Check
+
+# 来自 fork 的 PR 拿不到写权限，检查结束后在这里发布结果。
+# 本 workflow 不检出、不运行 PR 中的代码，只读取检查上传的报告。
+on:
+  workflow_run:
+    workflows: [Check Resource Pack]
+    types: [completed]
+
+permissions:
+  actions: read
+  pull-requests: write
+
+jobs:
+  comment:
+    name: 发布检查结果
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      (github.event.workflow_run.conclusion == 'success' ||
+      github.event.workflow_run.conclusion == 'failure')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          set -euo pipefail
+          if ! gh run download "$RUN_ID" --repo "$GITHUB_REPOSITORY" --name resource-pack-check --dir report \
+            || [ ! -f report/report.md ] || [ ! -f report/pr-number ]; then
+            echo "没有检查报告，跳过。"
+            exit 0
+          fi
+
+          # 报告由 PR 中的 workflow 生成，只在头提交一致的 PR 下评论。
+          pr=$(cat report/pr-number)
+          if [[ ! "$pr" =~ ^[0-9]+$ ]]; then
+            echo "PR 编号无效。"
+            exit 1
+          fi
+          if [ "$(gh pr view "$pr" --repo "$GITHUB_REPOSITORY" --json headRefOid --jq .headRefOid)" != "$HEAD_SHA" ]; then
+            echo "PR 已有新提交，跳过。"
+            exit 0
+          fi
+
+          marker='<!-- resource-pack-check -->'
+          { echo "$marker"; cat report/report.md; echo; echo "[运行详情]($RUN_URL)"; } > body.md
+          id=$(gh api --paginate "repos/$GITHUB_REPOSITORY/issues/$pr/comments" \
+            --jq ".[] | select(.user.login == \"github-actions[bot]\" and (.body | startswith(\"$marker\"))) | .id" \
+            | sed -n 1p)
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -F body=@body.md > /dev/null
+          else
+            gh api "repos/$GITHUB_REPOSITORY/issues/$pr/comments" -F body=@body.md > /dev/null
+          fi
