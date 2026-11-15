@@ -24,10 +24,11 @@
       "一具音游人",
       "せんもみ",
       "哈卡奈",
-      "Dominare"
+      "Dominare",
+      "河城绿茶"
     ],
     "description": "MetaMystia 示例资源包 ResourceExample",
-    "version": "0.14.2",
+    "version": "0.14.3",
     "idRangeStart": 9000,
     "idRangeEnd": 12999,
     "idSignature": "aAOXzLVM3OMBvNSCeRVZ4cjaPu6sHwOIlfBB9XB+n2WODMrDb+eCuWZeE88KlXUIAj58ok7Dm2wsTTYJJ6pq8THMcm+FU/ryndeZfy5gCRnY7q3SzXn2s0ChmZKuTRkkWAU0f252a6Z9AXYu4tyv/h+kJGWXO1lFaVg8jErJqUMSlpNGGZe0tZABRPhX1oxPwYH82Lnvg0ct3REguZBEicC0/d5Lh1djvatUK3FdTR2h0rj0JdhInC2rcP8ymIg5txvsPcaA8cCbFdwyPgEaMue2NIjawUKpwLAl8mGwWVHrUTSxahkJ+MVJA7nLOGbYtvxmiyYMPQnDEVynBcPEeA==",
@@ -4226,6 +4227,266 @@
           "pid": 16,
           "position": "Right",
           "text": "鸟脑袋看不懂写的是什么啦……虽然不知道是谁送给我这么漂亮精致的服装，总之先去试穿一下好了！"
+        }
+      ]
+    },
+        {
+      "name": "_ResourceExample_Gift_Clothes_9005",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "师傅，你怎么来了？"
+        },
+        {
+          "characterId": 27,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "别大惊小怪，只是魔法投影——"
+        },
+        {
+          "characterId": 27,
+          "characterType": "Special",
+          "pid": 10,
+          "position": "Left",
+          "text": "咳，咳咳。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Right",
+          "text": "……"
+        },
+        {
+          "characterId": 27,
+          "characterType": "Special",
+          "pid": 6,
+          "position": "Left",
+          "text": "长话短说，之前小恶魔这家伙偷偷教了你魔法对吧。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 17,
+          "position": "Right",
+          "text": "那个……（苦笑）"
+        },
+        {
+          "characterId": 27,
+          "characterType": "Special",
+          "pid": 11,
+          "position": "Left",
+          "text": "放心，小恶魔她好着呢，咳，咳咳。"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "帕秋莉大人，您歇会，还是我来说吧~"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "最近帕秋莉大人的魔法研究取得了一些进展，按照魔法使们当初定下的约定，帕秋莉大人准备发起“魔女的茶会”。"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Left",
+          "text": "虽说如此，帕秋莉大人觉得每次拜托咲夜准备茶点还是有些过不去。"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 8,
+          "position": "Left",
+          "text": "所以老板娘，你愿不愿意来给“魔女的茶会”准备茶点？"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "欸，我也能来吗？"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 13,
+          "position": "Left",
+          "text": "这个茶会当然不是什么阿猫阿狗都能混进来的。"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 7,
+          "position": "Left",
+          "text": "首先提供的茶点品质要上佳，其次要和几位魔女关系都不错。而老板娘你正好满足这两个条件！"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "那个，帕秋莉大人！信号不太好，我去那边了！"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "（小声）实不相瞒，本姑娘求爷爷告奶奶才从帕秋莉那换来了这个机会！"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 11,
+          "position": "Left",
+          "text": "你可一定要帮我啊，战友！"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 12,
+          "position": "Right",
+          "text": "……"
+        },
+        {
+          "characterId": 27,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "看她继续演~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 18,
+          "position": "Right",
+          "text": "（又是魔法投影吗）那个，好，好吧？"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 15,
+          "position": "Left",
+          "text": "老板娘你来给茶会备餐就行了，本姑娘只要提前在帕秋莉的茶杯里加点料，就可以对帕秋莉为所欲为。"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 14,
+          "position": "Left",
+          "text": "事后再保存一下证据，桀桀桀桀……"
+        },
+        {
+          "characterId": 27,
+          "characterType": "Special",
+          "pid": 4,
+          "position": "Left",
+          "text": "有趣。米斯蒂娅，你来倒也不是不行。"
+        },
+        {
+          "characterId": 27,
+          "characterType": "Special",
+          "pid": 2,
+          "position": "Left",
+          "text": "这衣服拿去，我邀请来的客人，不能丢了体面。"
+        },
+        {
+          "characterId": 9001,
+          "characterType": "Special",
+          "pid": 21,
+          "position": "Left",
+          "text": "这次就让我好好陪帕秋莉玩玩吧！"
+        },
+        {
+          "characterId": 27,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Left",
+          "text": "这次就让我好好陪小恶魔玩玩吧！"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Gift_Clothes_9006",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "“MetaMystia项目一周年纪念礼物，献给所有支持MetaMystia制作组走过这一年的玩家们。”"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "鸟脑袋看不懂写的是什么啦……虽然不知道是谁送给我这么漂亮精致的服装，总之先去试穿一下好了！"
+        }
+      ]
+    },
+    {
+      "name": "_ResourceExample_Gift_Clothes_9007",
+      "dialogList": [
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 20,
+          "position": "Right",
+          "text": "早苗小姐，这是？"
+        },
+        {
+          "characterId": 1005,
+          "characterType": "Special",
+          "pid": 0,
+          "position": "Left",
+          "text": "神奈子大人托我送给你的，和我同款的风祝服哦！"
+        },
+        {
+          "characterId": 1005,
+          "characterType": "Special",
+          "pid": 1,
+          "position": "Left",
+          "text": "这里面可是有着神明的祝福呢。"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 16,
+          "position": "Right",
+          "text": "谢谢早苗小姐和风神大人！"
+        },
+        {
+          "characterId": 1005,
+          "characterType": "Special",
+          "pid": 4,
+          "position": "Left",
+          "text": "那收集信仰的事，顺便也拜托你啦~"
+        },
+        {
+          "characterId": 1005,
+          "characterType": "Special",
+          "pid": 5,
+          "position": "Left",
+          "text": "互惠互利嘛~"
+        },
+        {
+          "characterId": 34,
+          "characterType": "Special",
+          "pid": 3,
+          "position": "Right",
+          "text": "欸——"
         }
       ]
     },
@@ -24990,6 +25251,24 @@
       "dialogPackageName": "_ResourceExample_Gift_Clothes_9003"
     },
     {
+      "itemId": 9005,
+      "allowRepeat": false,
+      "title": "茶会服",
+      "dialogPackageName": "_ResourceExample_Gift_Clothes_9005"
+    },
+    {
+      "itemId": 9006,
+      "allowRepeat": false,
+      "title": "真夜白羽",
+      "dialogPackageName": "_ResourceExample_Gift_Clothes_9006"
+    },
+    {
+      "itemId": 9007,
+      "allowRepeat": false,
+      "title": "风祝服",
+      "dialogPackageName": "_ResourceExample_Gift_Clothes_9007"
+    },
+    {
       "itemId": 10000,
       "allowRepeat": false,
       "title": "神秘的信封",
@@ -28250,6 +28529,252 @@
       "notebookVerticalOffset": 65,
       "notebookUITitleHorizontalOffset": 25,
       "notebookUITitleVerticalOffset": -165
+    },
+    {
+      "id": 9005,
+      "name": "茶会服",
+      "description": "帕秋莉师傅送给米斯蒂娅的礼物——“参加淑女的茶会，着装自然要优雅得体才行”。西式洋服风带来直观的悠闲惬意，高低袜设计侧添一丝古灵精怪。发丝虽稍显蓬乱却不失端庄，裙摆和袖口的蕾丝花边也俏皮可爱。不论是在茶歇上悠然自得，还是在平日里外出访友，这套衣服都是不二之选。",
+      "spritePath": "assets/Clothes/9005/icon.png",
+      "portraitPath": "assets/Clothes/9005/portrait.png",
+      "pixelFullConfig": {
+        "name": "_ResourceExample_Clothes_9005_茶会服",
+        "mainSprite": [
+          "assets/Clothes/9005/Sprite/Main_0, 0.png",
+          "assets/Clothes/9005/Sprite/Main_0, 1.png",
+          "assets/Clothes/9005/Sprite/Main_0, 2.png",
+          "assets/Clothes/9005/Sprite/Main_1, 0.png",
+          "assets/Clothes/9005/Sprite/Main_1, 1.png",
+          "assets/Clothes/9005/Sprite/Main_1, 2.png",
+          "assets/Clothes/9005/Sprite/Main_2, 0.png",
+          "assets/Clothes/9005/Sprite/Main_2, 1.png",
+          "assets/Clothes/9005/Sprite/Main_2, 2.png",
+          "assets/Clothes/9005/Sprite/Main_3, 0.png",
+          "assets/Clothes/9005/Sprite/Main_3, 1.png",
+          "assets/Clothes/9005/Sprite/Main_3, 2.png"
+        ],
+        "eyeSprite": [
+          "assets/Clothes/9005/Sprite/Eyes_0, 0.png",
+          "assets/Clothes/9005/Sprite/Eyes_0, 1.png",
+          "assets/Clothes/9005/Sprite/Eyes_0, 2.png",
+          "assets/Clothes/9005/Sprite/Eyes_0, 3.png",
+          "assets/Clothes/9005/Sprite/Eyes_1, 0.png",
+          "assets/Clothes/9005/Sprite/Eyes_1, 1.png",
+          "assets/Clothes/9005/Sprite/Eyes_1, 2.png",
+          "assets/Clothes/9005/Sprite/Eyes_1, 3.png",
+          "assets/Clothes/9005/Sprite/Eyes_2, 0.png",
+          "assets/Clothes/9005/Sprite/Eyes_2, 1.png",
+          "assets/Clothes/9005/Sprite/Eyes_2, 2.png",
+          "assets/Clothes/9005/Sprite/Eyes_2, 3.png",
+          "assets/Clothes/9005/Sprite/Eyes_3, 0.png",
+          "assets/Clothes/9005/Sprite/Eyes_3, 1.png",
+          "assets/Clothes/9005/Sprite/Eyes_3, 2.png",
+          "assets/Clothes/9005/Sprite/Eyes_3, 3.png",
+          "assets/Clothes/9005/Sprite/Eyes_4, 0.png",
+          "assets/Clothes/9005/Sprite/Eyes_4, 1.png",
+          "assets/Clothes/9005/Sprite/Eyes_4, 2.png",
+          "assets/Clothes/9005/Sprite/Eyes_4, 3.png",
+          "assets/Clothes/9005/Sprite/Eyes_5, 0.png",
+          "assets/Clothes/9005/Sprite/Eyes_5, 1.png",
+          "assets/Clothes/9005/Sprite/Eyes_5, 2.png",
+          "assets/Clothes/9005/Sprite/Eyes_5, 3.png"
+        ],
+        "hairSprite": [
+          "assets/Clothes/9005/Sprite/Hair_0, 0.png",
+          "assets/Clothes/9005/Sprite/Hair_0, 1.png",
+          "assets/Clothes/9005/Sprite/Hair_0, 2.png",
+          "assets/Clothes/9005/Sprite/Hair_1, 0.png",
+          "assets/Clothes/9005/Sprite/Hair_1, 1.png",
+          "assets/Clothes/9005/Sprite/Hair_1, 2.png",
+          "assets/Clothes/9005/Sprite/Hair_2, 0.png",
+          "assets/Clothes/9005/Sprite/Hair_2, 1.png",
+          "assets/Clothes/9005/Sprite/Hair_2, 2.png",
+          "assets/Clothes/9005/Sprite/Hair_3, 0.png",
+          "assets/Clothes/9005/Sprite/Hair_3, 1.png",
+          "assets/Clothes/9005/Sprite/Hair_3, 2.png"
+        ],
+        "backSprite": [
+          "assets/Clothes/9005/Sprite/Back_0, 0.png",
+          "assets/Clothes/9005/Sprite/Back_0, 1.png",
+          "assets/Clothes/9005/Sprite/Back_0, 2.png",
+          "assets/Clothes/9005/Sprite/Back_1, 0.png",
+          "assets/Clothes/9005/Sprite/Back_1, 1.png",
+          "assets/Clothes/9005/Sprite/Back_1, 2.png",
+          "assets/Clothes/9005/Sprite/Back_2, 0.png",
+          "assets/Clothes/9005/Sprite/Back_2, 1.png",
+          "assets/Clothes/9005/Sprite/Back_2, 2.png",
+          "assets/Clothes/9005/Sprite/Back_3, 0.png",
+          "assets/Clothes/9005/Sprite/Back_3, 1.png",
+          "assets/Clothes/9005/Sprite/Back_3, 2.png"
+        ]
+      },
+      "notebookHorizontalOffset": 30,
+      "notebookVerticalOffset": 38,
+      "notebookUITitleHorizontalOffset": 0,
+      "notebookUITitleVerticalOffset": -170
+    },
+    {
+      "id": 9006,
+      "name": "真夜白羽",
+      "description": "MetaMystia项目一周年纪念礼物，献给所有支持MetaMystia制作组走过这一年的玩家们。",
+      "spritePath": "assets/Clothes/9006/icon.png",
+      "portraitPath": "assets/Clothes/9006/portrait.png",
+      "pixelFullConfig": {
+        "name": "_ResourceExample_Clothes_9006_真夜白羽",
+        "mainSprite": [
+          "assets/Clothes/9006/Sprite/Main_0, 0.png",
+          "assets/Clothes/9006/Sprite/Main_0, 1.png",
+          "assets/Clothes/9006/Sprite/Main_0, 2.png",
+          "assets/Clothes/9006/Sprite/Main_1, 0.png",
+          "assets/Clothes/9006/Sprite/Main_1, 1.png",
+          "assets/Clothes/9006/Sprite/Main_1, 2.png",
+          "assets/Clothes/9006/Sprite/Main_2, 0.png",
+          "assets/Clothes/9006/Sprite/Main_2, 1.png",
+          "assets/Clothes/9006/Sprite/Main_2, 2.png",
+          "assets/Clothes/9006/Sprite/Main_3, 0.png",
+          "assets/Clothes/9006/Sprite/Main_3, 1.png",
+          "assets/Clothes/9006/Sprite/Main_3, 2.png"
+        ],
+        "eyeSprite": [
+          "assets/Clothes/9006/Sprite/Eyes_0, 0.png",
+          "assets/Clothes/9006/Sprite/Eyes_0, 1.png",
+          "assets/Clothes/9006/Sprite/Eyes_0, 2.png",
+          "assets/Clothes/9006/Sprite/Eyes_0, 3.png",
+          "assets/Clothes/9006/Sprite/Eyes_1, 0.png",
+          "assets/Clothes/9006/Sprite/Eyes_1, 1.png",
+          "assets/Clothes/9006/Sprite/Eyes_1, 2.png",
+          "assets/Clothes/9006/Sprite/Eyes_1, 3.png",
+          "assets/Clothes/9006/Sprite/Eyes_2, 0.png",
+          "assets/Clothes/9006/Sprite/Eyes_2, 1.png",
+          "assets/Clothes/9006/Sprite/Eyes_2, 2.png",
+          "assets/Clothes/9006/Sprite/Eyes_2, 3.png",
+          "assets/Clothes/9006/Sprite/Eyes_3, 0.png",
+          "assets/Clothes/9006/Sprite/Eyes_3, 1.png",
+          "assets/Clothes/9006/Sprite/Eyes_3, 2.png",
+          "assets/Clothes/9006/Sprite/Eyes_3, 3.png",
+          "assets/Clothes/9006/Sprite/Eyes_4, 0.png",
+          "assets/Clothes/9006/Sprite/Eyes_4, 1.png",
+          "assets/Clothes/9006/Sprite/Eyes_4, 2.png",
+          "assets/Clothes/9006/Sprite/Eyes_4, 3.png",
+          "assets/Clothes/9006/Sprite/Eyes_5, 0.png",
+          "assets/Clothes/9006/Sprite/Eyes_5, 1.png",
+          "assets/Clothes/9006/Sprite/Eyes_5, 2.png",
+          "assets/Clothes/9006/Sprite/Eyes_5, 3.png"
+        ],
+        "hairSprite": [
+          "assets/Clothes/9006/Sprite/Hair_0, 0.png",
+          "assets/Clothes/9006/Sprite/Hair_0, 1.png",
+          "assets/Clothes/9006/Sprite/Hair_0, 2.png",
+          "assets/Clothes/9006/Sprite/Hair_1, 0.png",
+          "assets/Clothes/9006/Sprite/Hair_1, 1.png",
+          "assets/Clothes/9006/Sprite/Hair_1, 2.png",
+          "assets/Clothes/9006/Sprite/Hair_2, 0.png",
+          "assets/Clothes/9006/Sprite/Hair_2, 1.png",
+          "assets/Clothes/9006/Sprite/Hair_2, 2.png",
+          "assets/Clothes/9006/Sprite/Hair_3, 0.png",
+          "assets/Clothes/9006/Sprite/Hair_3, 1.png",
+          "assets/Clothes/9006/Sprite/Hair_3, 2.png"
+        ],
+        "backSprite": [
+          "assets/Clothes/9006/Sprite/Back_0, 0.png",
+          "assets/Clothes/9006/Sprite/Back_0, 1.png",
+          "assets/Clothes/9006/Sprite/Back_0, 2.png",
+          "assets/Clothes/9006/Sprite/Back_1, 0.png",
+          "assets/Clothes/9006/Sprite/Back_1, 1.png",
+          "assets/Clothes/9006/Sprite/Back_1, 2.png",
+          "assets/Clothes/9006/Sprite/Back_2, 0.png",
+          "assets/Clothes/9006/Sprite/Back_2, 1.png",
+          "assets/Clothes/9006/Sprite/Back_2, 2.png",
+          "assets/Clothes/9006/Sprite/Back_3, 0.png",
+          "assets/Clothes/9006/Sprite/Back_3, 1.png",
+          "assets/Clothes/9006/Sprite/Back_3, 2.png"
+        ]
+      },
+      "notebookHorizontalOffset": 10,
+      "notebookVerticalOffset": 43,
+      "notebookUITitleHorizontalOffset": -5,
+      "notebookUITitleVerticalOffset": -165
+    },
+    {
+      "id": 9007,
+      "name": "风祝服",
+      "description": "八坂神奈子让早苗送给米斯蒂娅的风祝巫女服，面料崭新，质地柔顺。标签上写着由幻想乡最大服装行业八坂服饰生产，穿上之后似乎还能得到神明的祝福……顺带一提完全没有褪色。",
+      "spritePath": "assets/Clothes/9007/icon.png",
+      "portraitPath": "assets/Clothes/9007/portrait.png",
+      "pixelFullConfig": {
+        "name": "_ResourceExample_Clothes_9007_风祝服",
+        "mainSprite": [
+          "assets/Clothes/9007/Sprite/Main_0, 0.png",
+          "assets/Clothes/9007/Sprite/Main_0, 1.png",
+          "assets/Clothes/9007/Sprite/Main_0, 2.png",
+          "assets/Clothes/9007/Sprite/Main_1, 0.png",
+          "assets/Clothes/9007/Sprite/Main_1, 1.png",
+          "assets/Clothes/9007/Sprite/Main_1, 2.png",
+          "assets/Clothes/9007/Sprite/Main_2, 0.png",
+          "assets/Clothes/9007/Sprite/Main_2, 1.png",
+          "assets/Clothes/9007/Sprite/Main_2, 2.png",
+          "assets/Clothes/9007/Sprite/Main_3, 0.png",
+          "assets/Clothes/9007/Sprite/Main_3, 1.png",
+          "assets/Clothes/9007/Sprite/Main_3, 2.png"
+        ],
+        "eyeSprite": [
+          "assets/Clothes/9007/Sprite/Eyes_0, 0.png",
+          "assets/Clothes/9007/Sprite/Eyes_0, 1.png",
+          "assets/Clothes/9007/Sprite/Eyes_0, 2.png",
+          "assets/Clothes/9007/Sprite/Eyes_0, 3.png",
+          "assets/Clothes/9007/Sprite/Eyes_1, 0.png",
+          "assets/Clothes/9007/Sprite/Eyes_1, 1.png",
+          "assets/Clothes/9007/Sprite/Eyes_1, 2.png",
+          "assets/Clothes/9007/Sprite/Eyes_1, 3.png",
+          "assets/Clothes/9007/Sprite/Eyes_2, 0.png",
+          "assets/Clothes/9007/Sprite/Eyes_2, 1.png",
+          "assets/Clothes/9007/Sprite/Eyes_2, 2.png",
+          "assets/Clothes/9007/Sprite/Eyes_2, 3.png",
+          "assets/Clothes/9007/Sprite/Eyes_3, 0.png",
+          "assets/Clothes/9007/Sprite/Eyes_3, 1.png",
+          "assets/Clothes/9007/Sprite/Eyes_3, 2.png",
+          "assets/Clothes/9007/Sprite/Eyes_3, 3.png",
+          "assets/Clothes/9007/Sprite/Eyes_4, 0.png",
+          "assets/Clothes/9007/Sprite/Eyes_4, 1.png",
+          "assets/Clothes/9007/Sprite/Eyes_4, 2.png",
+          "assets/Clothes/9007/Sprite/Eyes_4, 3.png",
+          "assets/Clothes/9007/Sprite/Eyes_5, 0.png",
+          "assets/Clothes/9007/Sprite/Eyes_5, 1.png",
+          "assets/Clothes/9007/Sprite/Eyes_5, 2.png",
+          "assets/Clothes/9007/Sprite/Eyes_5, 3.png"
+        ],
+        "hairSprite": [
+          "assets/Clothes/9007/Sprite/Hair_0, 0.png",
+          "assets/Clothes/9007/Sprite/Hair_0, 1.png",
+          "assets/Clothes/9007/Sprite/Hair_0, 2.png",
+          "assets/Clothes/9007/Sprite/Hair_1, 0.png",
+          "assets/Clothes/9007/Sprite/Hair_1, 1.png",
+          "assets/Clothes/9007/Sprite/Hair_1, 2.png",
+          "assets/Clothes/9007/Sprite/Hair_2, 0.png",
+          "assets/Clothes/9007/Sprite/Hair_2, 1.png",
+          "assets/Clothes/9007/Sprite/Hair_2, 2.png",
+          "assets/Clothes/9007/Sprite/Hair_3, 0.png",
+          "assets/Clothes/9007/Sprite/Hair_3, 1.png",
+          "assets/Clothes/9007/Sprite/Hair_3, 2.png"
+        ],
+        "backSprite": [
+          "assets/Clothes/9007/Sprite/Back_0, 0.png",
+          "assets/Clothes/9007/Sprite/Back_0, 1.png",
+          "assets/Clothes/9007/Sprite/Back_0, 2.png",
+          "assets/Clothes/9007/Sprite/Back_1, 0.png",
+          "assets/Clothes/9007/Sprite/Back_1, 1.png",
+          "assets/Clothes/9007/Sprite/Back_1, 2.png",
+          "assets/Clothes/9007/Sprite/Back_2, 0.png",
+          "assets/Clothes/9007/Sprite/Back_2, 1.png",
+          "assets/Clothes/9007/Sprite/Back_2, 2.png",
+          "assets/Clothes/9007/Sprite/Back_3, 0.png",
+          "assets/Clothes/9007/Sprite/Back_3, 1.png",
+          "assets/Clothes/9007/Sprite/Back_3, 2.png"
+        ]
+      },
+      "notebookHorizontalOffset": 40,
+      "notebookVerticalOffset": 54,
+      "notebookUITitleHorizontalOffset": 30,
+      "notebookUITitleVerticalOffset": -191
     }
   ],
   "items": [
